@@ -8,7 +8,8 @@ import {
   MessageSquare,
   Linkedin,
   Twitter,
-  Facebook
+  Facebook,
+  CheckCircle2
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -21,21 +22,25 @@ const contactInfo = [
     icon: MapPin,
     title: "Head Office",
     details: ["123 Pharma Street", "Industrial Area, Andheri East", "Mumbai, Maharashtra 400093"],
+    color: "bg-primary/10 text-primary",
   },
   {
     icon: Phone,
     title: "Phone",
     details: ["+91 22 1234 5678", "+91 22 8765 4321"],
+    color: "bg-accent/10 text-accent",
   },
   {
     icon: Mail,
     title: "Email",
     details: ["info@pharmacare.com", "sales@pharmacare.com"],
+    color: "bg-emerald-light text-emerald-medium",
   },
   {
     icon: Clock,
     title: "Business Hours",
     details: ["Monday - Friday: 9:00 AM - 6:00 PM", "Saturday: 9:00 AM - 1:00 PM"],
+    color: "bg-secondary text-muted-foreground",
   },
 ];
 
@@ -83,13 +88,14 @@ const Contact = () => {
     <Layout>
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 bg-gradient-hero overflow-hidden">
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl" />
+        <div className="absolute top-20 right-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-10 left-10 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
         <div className="container-wide relative z-10">
           <div className="max-w-3xl">
-            <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6 animate-fade-up">
+            <span className="badge badge-primary mb-6 animate-fade-up">
               Contact Us
             </span>
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6 animate-fade-up delay-100">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-foreground leading-[1.1] mb-6 animate-fade-up delay-100">
               Get in Touch With Our Team
             </h1>
             <p className="text-lg text-muted-foreground animate-fade-up delay-200">
@@ -101,7 +107,7 @@ const Contact = () => {
       </section>
 
       {/* Contact Info Cards */}
-      <section className="py-16 bg-card">
+      <section className="py-16 bg-card border-b border-border">
         <div className="container-wide">
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {contactInfo.map((info, index) => (
@@ -109,10 +115,10 @@ const Contact = () => {
                 key={index}
                 className="bg-background rounded-2xl p-6 border border-border hover-lift"
               >
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                  <info.icon className="w-6 h-6 text-primary" />
+                <div className={`w-14 h-14 rounded-2xl ${info.color} flex items-center justify-center mb-5`}>
+                  <info.icon className="w-6 h-6" />
                 </div>
-                <h3 className="font-semibold text-foreground mb-3">{info.title}</h3>
+                <h3 className="font-bold text-foreground mb-3">{info.title}</h3>
                 <div className="space-y-1">
                   {info.details.map((detail, i) => (
                     <p key={i} className="text-sm text-muted-foreground">{detail}</p>
@@ -124,22 +130,20 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Contact Form & Map */}
+      {/* Contact Form & Departments */}
       <section className="section-padding bg-background">
         <div className="container-wide">
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid lg:grid-cols-5 gap-12">
             {/* Form */}
-            <div>
-              <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
-                Send a Message
-              </span>
-              <h2 className="font-display text-3xl font-bold text-foreground mb-6">
+            <div className="lg:col-span-3">
+              <span className="badge badge-primary mb-4">Send a Message</span>
+              <h2 className="text-3xl font-extrabold text-foreground mb-6">
                 We'd Love to Hear From You
               </h2>
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">
+                    <label className="block text-sm font-semibold text-foreground mb-2">
                       Your Name *
                     </label>
                     <Input
@@ -151,7 +155,7 @@ const Contact = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">
+                    <label className="block text-sm font-semibold text-foreground mb-2">
                       Email Address *
                     </label>
                     <Input
@@ -166,7 +170,7 @@ const Contact = () => {
                 </div>
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">
+                    <label className="block text-sm font-semibold text-foreground mb-2">
                       Phone Number
                     </label>
                     <Input
@@ -178,7 +182,7 @@ const Contact = () => {
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">
+                    <label className="block text-sm font-semibold text-foreground mb-2">
                       Subject *
                     </label>
                     <Input
@@ -191,7 +195,7 @@ const Contact = () => {
                   </div>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">
+                  <label className="block text-sm font-semibold text-foreground mb-2">
                     Message *
                   </label>
                   <Textarea
@@ -200,7 +204,7 @@ const Contact = () => {
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     placeholder="Tell us more about your inquiry..."
                     rows={5}
-                    className="rounded-xl"
+                    className="rounded-xl resize-none"
                   />
                 </div>
                 <Button
@@ -216,15 +220,15 @@ const Contact = () => {
               </form>
             </div>
 
-            {/* Departments & Map */}
-            <div className="space-y-8">
+            {/* Departments & Info */}
+            <div className="lg:col-span-2 space-y-6">
               {/* Departments */}
-              <div className="bg-card rounded-2xl p-8 border border-border">
+              <div className="bg-card rounded-2xl p-6 border border-border">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                    <MessageSquare className="w-5 h-5 text-primary" />
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                    <MessageSquare className="w-6 h-6 text-primary" />
                   </div>
-                  <h3 className="font-display text-xl font-semibold text-foreground">
+                  <h3 className="text-xl font-bold text-foreground">
                     Department Contacts
                   </h3>
                 </div>
@@ -234,7 +238,7 @@ const Contact = () => {
                       key={index}
                       className="flex items-center justify-between py-3 border-b border-border last:border-0"
                     >
-                      <span className="text-foreground">{dept.name}</span>
+                      <span className="text-foreground font-medium">{dept.name}</span>
                       <a
                         href={`mailto:${dept.email}`}
                         className="text-sm text-primary hover:underline"
@@ -246,19 +250,27 @@ const Contact = () => {
                 </div>
               </div>
 
-              {/* Map Placeholder */}
-              <div className="bg-gradient-to-br from-secondary to-muted rounded-2xl h-64 flex items-center justify-center border border-border">
-                <div className="text-center">
-                  <MapPin className="w-12 h-12 text-primary/30 mx-auto mb-3" />
-                  <p className="text-muted-foreground">
-                    Interactive map integration available
-                  </p>
-                </div>
+              {/* Quick Facts */}
+              <div className="bg-primary rounded-2xl p-6 text-primary-foreground">
+                <h4 className="font-bold text-lg mb-4">Why Contact Us?</h4>
+                <ul className="space-y-3">
+                  {[
+                    "Quick response within 24 hours",
+                    "Dedicated account managers",
+                    "Technical product support",
+                    "Custom formulation requests",
+                  ].map((item, index) => (
+                    <li key={index} className="flex items-center gap-3">
+                      <CheckCircle2 className="w-5 h-5 shrink-0" />
+                      <span className="text-sm">{item}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
 
               {/* Social Links */}
               <div className="bg-card rounded-2xl p-6 border border-border">
-                <h4 className="font-semibold text-foreground mb-4">Follow Us</h4>
+                <h4 className="font-bold text-foreground mb-4">Follow Us</h4>
                 <div className="flex gap-3">
                   {[
                     { icon: Linkedin, label: "LinkedIn" },
@@ -278,6 +290,16 @@ const Contact = () => {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Map Section */}
+      <section className="h-80 bg-secondary/50 flex items-center justify-center border-t border-border">
+        <div className="text-center">
+          <MapPin className="w-16 h-16 text-primary/30 mx-auto mb-4" />
+          <p className="text-muted-foreground font-medium">
+            Interactive Google Maps integration available
+          </p>
         </div>
       </section>
     </Layout>
