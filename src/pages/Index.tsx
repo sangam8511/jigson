@@ -1,29 +1,31 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, CheckCircle2, Star, Users, Award, Pill } from "lucide-react";
+import { ArrowRight, CheckCircle2, Star, Users, Award, Pill, Truck, ShieldCheck, HeartPulse } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
 import heroPharma from "@/assets/hero-pharma.jpg";
 import productHero from "@/assets/product-hero.jpg";
 
 const stats = [
-  { value: "20+", label: "Years Experience" },
-  { value: "500+", label: "Products" },
-  { value: "50+", label: "Countries" },
-  { value: "100M+", label: "Lives Touched" },
+  { value: "20+", label: "Years Experience", icon: Award },
+  { value: "500+", label: "Products", icon: Pill },
+  { value: "50+", label: "Countries", icon: Truck },
+  { value: "100M+", label: "Lives Touched", icon: HeartPulse },
 ];
 
-const features = [
-  { icon: Award, title: "WHO-GMP Certified", description: "International quality standards" },
-  { icon: Pill, title: "500+ Formulations", description: "Comprehensive product range" },
-  { icon: Users, title: "Global Reach", description: "Exporting to 50+ countries" },
+const categories = [
+  { name: "Tablets", icon: "💊", count: "150+ Products" },
+  { name: "Capsules", icon: "💉", count: "80+ Products" },
+  { name: "Syrups", icon: "🧴", count: "60+ Products" },
+  { name: "Injectables", icon: "💉", count: "45+ Products" },
+  { name: "Nutraceuticals", icon: "🌿", count: "70+ Products" },
+  { name: "Skincare", icon: "✨", count: "35+ Products" },
 ];
 
 const certifications = [
-  "WHO-GMP", "ISO 9001:2015", "FDA Approved", "CE Marked", "ISO 14001"
-];
-
-const partners = [
-  "Global Health Corp", "MedTech Solutions", "HealthFirst", "PharmaLink", "BioVenture"
+  { name: "WHO-GMP", description: "Certified" },
+  { name: "ISO 9001:2015", description: "Quality Management" },
+  { name: "FDA Approved", description: "US Standards" },
+  { name: "CE Marked", description: "European Compliance" },
 ];
 
 const reviews = [
@@ -32,18 +34,21 @@ const reviews = [
     role: "Chief Pharmacist, City Hospital",
     content: "PharmaCare has been our trusted supplier for over 5 years. Their commitment to quality and timely delivery is exceptional.",
     rating: 5,
+    image: "SC",
   },
   {
     name: "Michael Roberts",
     role: "Procurement Director, Global Health",
     content: "The consistency in product quality and their responsive customer service makes them stand out in the pharmaceutical industry.",
     rating: 5,
+    image: "MR",
   },
   {
     name: "Dr. Priya Sharma",
     role: "Medical Director, HealthPlus",
     content: "Their extensive range of formulations and competitive pricing has made them our primary pharmaceutical partner.",
     rating: 5,
+    image: "PS",
   },
 ];
 
@@ -51,68 +56,91 @@ const Index = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
-        {/* Background */}
-        <div className="absolute inset-0 bg-gradient-hero" />
-        <div className="absolute top-1/4 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-teal-light rounded-full blur-3xl" />
+      <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-gradient-hero">
+        {/* Decorative Elements */}
+        <div className="absolute top-20 right-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 left-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
         
         <div className="container-wide relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-up">
-              <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
-                Leading Pharmaceutical Manufacturer
-              </span>
-              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6">
-                Innovation in
-                <span className="block text-primary">Healthcare Solutions</span>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-6">
+                <ShieldCheck className="w-4 h-4" />
+                WHO-GMP Certified Manufacturer
+              </div>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-foreground leading-[1.1] mb-6">
+                Your Trusted
+                <span className="block text-primary">Online Pharmacy</span>
+                for Every Need
               </h1>
-              <p className="text-lg text-muted-foreground mb-8 max-w-lg">
+              <p className="text-lg text-muted-foreground mb-8 max-w-lg leading-relaxed">
                 Delivering world-class pharmaceutical formulations with unwavering 
                 commitment to quality, innovation, and patient well-being.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button variant="hero" size="xl" asChild>
                   <Link to="/products">
-                    Explore Products
+                    Shop Now
                     <ArrowRight className="w-5 h-5" />
                   </Link>
                 </Button>
                 <Button variant="outline" size="xl" asChild>
-                  <Link to="/about">Learn More</Link>
+                  <Link to="/about">Explore More</Link>
                 </Button>
               </div>
               
-              {/* Stats */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-12 pt-8 border-t border-border">
-                {stats.map((stat, index) => (
-                  <div key={index} className="animate-fade-up" style={{ animationDelay: `${index * 100}ms` }}>
-                    <div className="font-display text-3xl font-bold text-primary">{stat.value}</div>
-                    <div className="text-sm text-muted-foreground">{stat.label}</div>
+              {/* Trust Badges */}
+              <div className="flex items-center gap-6 mt-10 pt-8 border-t border-border">
+                <div className="flex items-center gap-2">
+                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                    <Truck className="w-5 h-5 text-primary" />
                   </div>
-                ))}
+                  <div>
+                    <div className="text-sm font-semibold">Free Delivery</div>
+                    <div className="text-xs text-muted-foreground">On orders over ₹500</div>
+                  </div>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center">
+                    <ShieldCheck className="w-5 h-5 text-accent" />
+                  </div>
+                  <div>
+                    <div className="text-sm font-semibold">100% Genuine</div>
+                    <div className="text-xs text-muted-foreground">Certified products</div>
+                  </div>
+                </div>
               </div>
             </div>
             
             <div className="relative animate-fade-up delay-200">
-              <div className="relative rounded-3xl overflow-hidden shadow-large">
+              <div className="relative rounded-[2rem] overflow-hidden shadow-large">
                 <img
                   src={heroPharma}
                   alt="Pharmaceutical Products"
-                  className="w-full h-[500px] object-cover"
+                  className="w-full h-[520px] object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-foreground/20 to-transparent" />
               </div>
-              {/* Floating Card */}
-              <div className="absolute -bottom-6 -left-6 bg-card p-6 rounded-2xl shadow-large border border-border animate-float">
+              {/* Floating Stats Card */}
+              <div className="absolute -bottom-6 -left-6 bg-card p-5 rounded-2xl shadow-large border border-border animate-float">
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-success/10 flex items-center justify-center">
-                    <CheckCircle2 className="w-6 h-6 text-success" />
+                  <div className="w-14 h-14 rounded-2xl bg-primary flex items-center justify-center">
+                    <Users className="w-7 h-7 text-primary-foreground" />
                   </div>
                   <div>
-                    <div className="font-semibold text-foreground">Quality Assured</div>
-                    <div className="text-sm text-muted-foreground">WHO-GMP Certified</div>
+                    <div className="text-2xl font-bold text-foreground">50K+</div>
+                    <div className="text-sm text-muted-foreground">Happy Customers</div>
                   </div>
+                </div>
+              </div>
+              {/* Rating Badge */}
+              <div className="absolute top-6 -right-4 bg-card px-4 py-3 rounded-2xl shadow-large border border-border">
+                <div className="flex items-center gap-2">
+                  <div className="flex gap-0.5">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 fill-accent text-accent" />
+                    ))}
+                  </div>
+                  <span className="font-bold">4.9</span>
                 </div>
               </div>
             </div>
@@ -120,15 +148,134 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Stats Section */}
+      <section className="py-16 bg-card border-y border-border">
+        <div className="container-wide">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                  <stat.icon className="w-7 h-7 text-primary" />
+                </div>
+                <div className="text-3xl font-extrabold text-foreground mb-1">{stat.value}</div>
+                <div className="text-sm text-muted-foreground">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Shop by Category */}
+      <section className="section-padding bg-background">
+        <div className="container-wide">
+          <div className="flex items-end justify-between mb-12">
+            <div>
+              <span className="badge badge-primary mb-3">Categories</span>
+              <h2 className="text-3xl md:text-4xl font-extrabold text-foreground">
+                Shop by Category
+              </h2>
+            </div>
+            <Button variant="ghost" asChild className="hidden md:flex">
+              <Link to="/products">
+                View All Categories
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </Button>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            {categories.map((category, index) => (
+              <Link
+                key={index}
+                to="/products"
+                className="group bg-card rounded-2xl p-6 border border-border hover:border-primary/30 hover:shadow-medium transition-all duration-300 text-center"
+              >
+                <div className="text-4xl mb-4">{category.icon}</div>
+                <h3 className="font-bold text-foreground mb-1 group-hover:text-primary transition-colors">
+                  {category.name}
+                </h3>
+                <p className="text-xs text-muted-foreground">{category.count}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Products */}
+      <section className="section-padding bg-secondary/50">
+        <div className="container-wide">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <span className="badge badge-primary mb-3">Featured</span>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-foreground mb-4">
+              Today's Best Deals
+            </h2>
+            <p className="text-muted-foreground">
+              Discover our most popular pharmaceutical products at competitive prices.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { name: "Vitamin C 500mg", category: "Supplements", price: "₹299", oldPrice: "₹399", discount: "25%" },
+              { name: "Omega-3 Fish Oil", category: "Heart Health", price: "₹599", oldPrice: "₹799", discount: "25%" },
+              { name: "Multivitamin Tablets", category: "Daily Health", price: "₹449", oldPrice: "₹549", discount: "18%" },
+              { name: "Calcium + D3", category: "Bone Health", price: "₹349", oldPrice: "₹449", discount: "22%" },
+            ].map((product, index) => (
+              <div
+                key={index}
+                className="group bg-card rounded-2xl border border-border overflow-hidden hover:shadow-medium transition-all duration-300"
+              >
+                <div className="relative h-48 bg-gradient-to-br from-emerald-light to-secondary flex items-center justify-center">
+                  <Pill className="w-20 h-20 text-primary/20 group-hover:text-primary/30 transition-colors" />
+                  <span className="absolute top-3 left-3 bg-accent text-accent-foreground text-xs font-bold px-3 py-1 rounded-full">
+                    {product.discount} OFF
+                  </span>
+                </div>
+                <div className="p-5">
+                  <span className="text-xs text-muted-foreground">{product.category}</span>
+                  <h3 className="font-bold text-foreground mt-1 mb-3 group-hover:text-primary transition-colors">
+                    {product.name}
+                  </h3>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <span className="text-lg font-bold text-primary">{product.price}</span>
+                      <span className="text-sm text-muted-foreground line-through">{product.oldPrice}</span>
+                    </div>
+                    <Button variant="pill" size="sm">Add</Button>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* About Snippet */}
-      <section className="section-padding bg-card">
+      <section className="section-padding bg-background">
         <div className="container-wide">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="grid grid-cols-2 gap-4">
+              <div className="space-y-4">
+                <div className="h-52 rounded-2xl bg-primary/10 flex items-center justify-center">
+                  <Award className="w-16 h-16 text-primary/40" />
+                </div>
+                <div className="h-36 rounded-2xl overflow-hidden">
+                  <img src={productHero} alt="Products" className="w-full h-full object-cover" />
+                </div>
+              </div>
+              <div className="space-y-4 pt-8">
+                <div className="h-36 rounded-2xl bg-accent/10 flex items-center justify-center">
+                  <HeartPulse className="w-12 h-12 text-accent/50" />
+                </div>
+                <div className="h-52 rounded-2xl bg-primary flex items-center justify-center text-primary-foreground p-6">
+                  <div className="text-center">
+                    <div className="text-4xl font-extrabold">20+</div>
+                    <div className="text-sm opacity-80 mt-1">Years of Trust</div>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div>
-              <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
-                About PharmaCare
-              </span>
-              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
+              <span className="badge badge-primary mb-4">About PharmaCare</span>
+              <h2 className="text-3xl md:text-4xl font-extrabold text-foreground mb-6">
                 Pioneering Excellence in Pharmaceutical Manufacturing
               </h2>
               <p className="text-muted-foreground mb-6 leading-relaxed">
@@ -138,175 +285,82 @@ const Index = () => {
                 meets the highest international standards.
               </p>
               <div className="space-y-4 mb-8">
-                {features.map((feature, index) => (
-                  <div key={index} className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-                      <feature.icon className="w-5 h-5 text-primary" />
+                {["WHO-GMP Certified Manufacturing", "500+ Product Formulations", "Export to 50+ Countries"].map((item, index) => (
+                  <div key={index} className="flex items-center gap-3">
+                    <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center">
+                      <CheckCircle2 className="w-4 h-4 text-primary" />
                     </div>
-                    <div>
-                      <div className="font-medium text-foreground">{feature.title}</div>
-                      <div className="text-sm text-muted-foreground">{feature.description}</div>
-                    </div>
+                    <span className="text-foreground font-medium">{item}</span>
                   </div>
                 ))}
               </div>
               <Button variant="default" size="lg" asChild>
                 <Link to="/about">
-                  Discover Our Story
+                  Learn More About Us
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </Button>
             </div>
-            <div className="grid grid-cols-2 gap-4">
-              <div className="space-y-4">
-                <div className="h-48 rounded-2xl bg-gradient-to-br from-primary/10 to-teal-light flex items-center justify-center">
-                  <Award className="w-16 h-16 text-primary" />
-                </div>
-                <div className="h-64 rounded-2xl overflow-hidden">
-                  <img src={productHero} alt="Products" className="w-full h-full object-cover" />
-                </div>
-              </div>
-              <div className="space-y-4 pt-8">
-                <div className="h-64 rounded-2xl bg-gradient-to-br from-teal-light to-secondary flex items-center justify-center">
-                  <Pill className="w-16 h-16 text-primary" />
-                </div>
-                <div className="h-48 rounded-2xl bg-primary flex items-center justify-center text-primary-foreground">
-                  <div className="text-center">
-                    <div className="font-display text-4xl font-bold">20+</div>
-                    <div className="text-sm opacity-80">Years of Trust</div>
-                  </div>
-                </div>
-              </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Certifications */}
+      <section className="py-16 bg-primary text-primary-foreground">
+        <div className="container-wide">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+            <div className="text-center md:text-left">
+              <h3 className="text-2xl font-bold mb-2">Our Quality Certifications</h3>
+              <p className="text-primary-foreground/70">
+                Committed to the highest international standards
+              </p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Hero Product */}
-      <section className="section-padding bg-gradient-to-br from-primary via-primary to-teal-medium text-primary-foreground">
-        <div className="container-wide">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <span className="inline-block px-4 py-2 rounded-full bg-primary-foreground/10 text-primary-foreground text-sm font-medium mb-4">
-              Featured Products
-            </span>
-            <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
-              Our Flagship Formulations
-            </h2>
-            <p className="text-primary-foreground/80">
-              Discover our range of innovative pharmaceutical products designed 
-              to address diverse healthcare needs across the globe.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6">
-            {["Tablets & Capsules", "Injectables", "Oral Liquids"].map((category, index) => (
-              <div
-                key={index}
-                className="group bg-primary-foreground/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-primary-foreground/20 transition-all duration-300"
-              >
-                <div className="w-16 h-16 rounded-xl bg-primary-foreground/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                  <Pill className="w-8 h-8" />
-                </div>
-                <h3 className="font-display text-xl font-semibold mb-3">{category}</h3>
-                <p className="text-primary-foreground/70 mb-6 text-sm">
-                  High-quality formulations manufactured under strict GMP guidelines.
-                </p>
-                <Link
-                  to="/products"
-                  className="inline-flex items-center gap-2 text-sm font-medium hover:gap-3 transition-all"
+            <div className="flex flex-wrap justify-center gap-4">
+              {certifications.map((cert, index) => (
+                <div
+                  key={index}
+                  className="bg-primary-foreground/10 backdrop-blur-sm px-6 py-4 rounded-2xl text-center min-w-[140px]"
                 >
-                  View Products <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Compliance Badges */}
-      <section className="section-padding bg-background">
-        <div className="container-wide">
-          <div className="text-center mb-12">
-            <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
-              Quality Certifications
-            </span>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Committed to Excellence
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Our facilities are certified by leading international regulatory bodies, 
-              ensuring the highest standards of quality and safety.
-            </p>
-          </div>
-          <div className="flex flex-wrap justify-center gap-6">
-            {certifications.map((cert, index) => (
-              <div
-                key={index}
-                className="glass-card px-8 py-6 rounded-2xl flex items-center gap-4 hover-lift"
-              >
-                <div className="w-12 h-12 rounded-full bg-success/10 flex items-center justify-center">
-                  <CheckCircle2 className="w-6 h-6 text-success" />
+                  <div className="font-bold">{cert.name}</div>
+                  <div className="text-sm text-primary-foreground/70">{cert.description}</div>
                 </div>
-                <span className="font-medium text-foreground">{cert}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Partner Logos */}
-      <section className="py-16 bg-secondary/50">
-        <div className="container-wide">
-          <div className="text-center mb-10">
-            <h3 className="text-sm font-medium text-muted-foreground uppercase tracking-wider">
-              Trusted by Industry Leaders
-            </h3>
-          </div>
-          <div className="flex flex-wrap justify-center items-center gap-12">
-            {partners.map((partner, index) => (
-              <div
-                key={index}
-                className="text-xl font-display font-semibold text-muted-foreground/50 hover:text-primary transition-colors cursor-pointer"
-              >
-                {partner}
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
       {/* Reviews */}
-      <section className="section-padding bg-card">
+      <section className="section-padding bg-secondary/30">
         <div className="container-wide">
-          <div className="text-center mb-12">
-            <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
-              Testimonials
-            </span>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-              What Our Partners Say
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <span className="badge badge-primary mb-3">Testimonials</span>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-foreground mb-4">
+              What Our Customers Say
             </h2>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-6">
             {reviews.map((review, index) => (
               <div
                 key={index}
-                className="bg-background rounded-2xl p-8 border border-border hover-lift"
+                className="bg-card rounded-2xl p-8 border border-border hover-lift"
               >
                 <div className="flex gap-1 mb-4">
                   {[...Array(review.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-gold text-gold" />
+                    <Star key={i} className="w-5 h-5 fill-accent text-accent" />
                   ))}
                 </div>
                 <p className="text-muted-foreground mb-6 leading-relaxed">
                   "{review.content}"
                 </p>
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                    <span className="font-display font-semibold text-primary">
-                      {review.name.charAt(0)}
+                  <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
+                    <span className="font-bold text-primary-foreground">
+                      {review.image}
                     </span>
                   </div>
                   <div>
-                    <div className="font-medium text-foreground">{review.name}</div>
+                    <div className="font-bold text-foreground">{review.name}</div>
                     <div className="text-sm text-muted-foreground">{review.role}</div>
                   </div>
                 </div>
@@ -316,10 +370,10 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Work With Us CTA */}
-      <section className="section-padding bg-gradient-to-r from-navy via-foreground to-navy text-primary-foreground">
-        <div className="container-wide text-center">
-          <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
+      {/* CTA Section */}
+      <section className="section-padding bg-gradient-to-r from-primary via-emerald-medium to-primary">
+        <div className="container-wide text-center text-primary-foreground">
+          <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
             Ready to Partner With Us?
           </h2>
           <p className="text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
@@ -333,7 +387,7 @@ const Index = () => {
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </Button>
-            <Button variant="glass" size="xl" asChild>
+            <Button variant="glass" size="xl" className="text-primary-foreground border-primary-foreground/30" asChild>
               <Link to="/contact">Contact Us</Link>
             </Button>
           </div>

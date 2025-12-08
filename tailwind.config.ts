@@ -14,8 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        display: ['Playfair Display', 'Georgia', 'serif'],
+        sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -61,20 +60,24 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        teal: {
-          light: "hsl(var(--teal-light))",
-          medium: "hsl(var(--teal-medium))",
+        emerald: {
+          light: "hsl(var(--emerald-light))",
+          medium: "hsl(var(--emerald-medium))",
         },
         navy: "hsl(var(--navy))",
-        gold: "hsl(var(--gold))",
+        orange: "hsl(var(--orange))",
         success: "hsl(var(--success))",
       },
       borderRadius: {
         lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+        md: "calc(var(--radius) - 4px)",
+        sm: "calc(var(--radius) - 8px)",
+        "2xl": "1.25rem",
+        "3xl": "1.5rem",
+        "4xl": "2rem",
       },
       boxShadow: {
+        'xs': 'var(--shadow-xs)',
         'soft': 'var(--shadow-sm)',
         'medium': 'var(--shadow-md)',
         'large': 'var(--shadow-lg)',
