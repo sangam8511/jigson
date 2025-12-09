@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import jigsonLogo from "@/assets/jigson-logo.jpg";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -37,13 +38,12 @@ export const Navbar = () => {
       <div className="container-wide">
         <nav className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3">
-            <div className="w-11 h-11 rounded-2xl bg-primary flex items-center justify-center shadow-soft">
-              <span className="text-primary-foreground font-extrabold text-xl">P</span>
-            </div>
-            <span className="text-xl font-bold text-foreground">
-              PharmaCare
-            </span>
+          <Link to="/" className="flex items-center">
+            <img 
+              src={jigsonLogo} 
+              alt="Jigson Pharmaceuticals" 
+              className="h-12 md:h-14 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}

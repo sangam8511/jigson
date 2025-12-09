@@ -32,7 +32,7 @@ const reviews = [
   {
     name: "Dr. Sarah Chen",
     role: "Chief Pharmacist, City Hospital",
-    content: "PharmaCare has been our trusted supplier for over 5 years. Their commitment to quality and timely delivery is exceptional.",
+    content: "Jigson Pharmaceuticals has been our trusted supplier for over 5 years. Their commitment to quality and timely delivery is exceptional.",
     rating: 5,
     image: "SC",
   },
@@ -223,7 +223,7 @@ const Index = () => {
                 key={index}
                 className="group bg-card rounded-2xl border border-border overflow-hidden hover:shadow-medium transition-all duration-300"
               >
-                <div className="relative h-48 bg-gradient-to-br from-emerald-light to-secondary flex items-center justify-center">
+                <div className="relative h-48 bg-gradient-to-br from-blue-light to-secondary flex items-center justify-center">
                   <Pill className="w-20 h-20 text-primary/20 group-hover:text-primary/30 transition-colors" />
                   <span className="absolute top-3 left-3 bg-accent text-accent-foreground text-xs font-bold px-3 py-1 rounded-full">
                     {product.discount} OFF
@@ -274,12 +274,12 @@ const Index = () => {
               </div>
             </div>
             <div>
-              <span className="badge badge-primary mb-4">About PharmaCare</span>
+              <span className="badge badge-primary mb-4">About Jigson</span>
               <h2 className="text-3xl md:text-4xl font-extrabold text-foreground mb-6">
                 Pioneering Excellence in Pharmaceutical Manufacturing
               </h2>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                With over two decades of experience, PharmaCare has established itself as a 
+                With over two decades of experience, Jigson Pharmaceuticals has established itself as a 
                 trusted name in pharmaceutical manufacturing. Our state-of-the-art facilities, 
                 combined with rigorous quality control measures, ensure that every product 
                 meets the highest international standards.
@@ -371,14 +371,14 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-gradient-to-r from-primary via-emerald-medium to-primary">
+      <section className="section-padding bg-gradient-to-r from-primary via-blue-medium to-primary">
         <div className="container-wide text-center text-primary-foreground">
           <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
             Ready to Partner With Us?
           </h2>
           <p className="text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
             Join our global network of healthcare partners and experience the 
-            PharmaCare difference in quality, reliability, and innovation.
+            Jigson difference in quality, reliability, and innovation.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button variant="accent" size="xl" asChild>

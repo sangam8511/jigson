@@ -31,7 +31,7 @@ const founders = [
   {
     name: "Dr. Rajesh Kumar",
     role: "Founder & CEO",
-    bio: "With over 30 years in pharmaceutical research, Dr. Kumar founded PharmaCare with a vision to make quality healthcare accessible globally.",
+    bio: "With over 30 years in pharmaceutical research, Dr. Kumar founded Jigson Pharmaceuticals with a vision to make quality healthcare accessible globally.",
   },
   {
     name: "Dr. Meera Patel",
@@ -46,7 +46,7 @@ const founders = [
 ];
 
 const milestones = [
-  { year: "2003", title: "Founded", description: "PharmaCare established in Mumbai" },
+  { year: "2003", title: "Founded", description: "Jigson Pharmaceuticals established in Mumbai" },
   { year: "2008", title: "WHO-GMP Certified", description: "Achieved international certification" },
   { year: "2012", title: "Global Expansion", description: "Started exporting to 20+ countries" },
   { year: "2018", title: "R&D Center", description: "Launched advanced research facility" },
@@ -62,7 +62,7 @@ const About = () => {
         <div className="container-wide relative z-10">
           <div className="max-w-3xl">
             <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6 animate-fade-up">
-              About PharmaCare
+              About Jigson
             </span>
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6 animate-fade-up delay-100">
               Pioneering Healthcare Excellence Since 2003
@@ -101,7 +101,7 @@ const About = () => {
             </div>
 
             {/* Vision */}
-            <div className="bg-gradient-to-br from-primary to-teal-medium rounded-3xl p-10 text-primary-foreground hover-lift">
+            <div className="bg-gradient-to-br from-primary to-blue-medium rounded-3xl p-10 text-primary-foreground hover-lift">
               <div className="w-16 h-16 rounded-2xl bg-primary-foreground/10 flex items-center justify-center mb-6">
                 <Eye className="w-8 h-8" />
               </div>
@@ -209,7 +209,7 @@ const About = () => {
                 key={index}
                 className="bg-background rounded-3xl p-8 border border-border hover-lift text-center"
               >
-                <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary to-teal-medium flex items-center justify-center mx-auto mb-6">
+                <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary to-blue-medium flex items-center justify-center mx-auto mb-6">
                   <span className="text-3xl font-display font-bold text-primary-foreground">
                     {founder.name.split(' ').map(n => n[0]).join('')}
                   </span>
@@ -230,7 +230,7 @@ const About = () => {
             <div className="relative rounded-3xl overflow-hidden">
               <img
                 src={aboutLab}
-                alt="PharmaCare Laboratory"
+                alt="Jigson Pharmaceuticals Laboratory"
                 className="w-full h-[400px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/30 to-transparent" />
