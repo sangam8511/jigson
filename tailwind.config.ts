@@ -60,12 +60,12 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        emerald: {
-          light: "hsl(var(--emerald-light))",
-          medium: "hsl(var(--emerald-medium))",
+        blue: {
+          light: "hsl(var(--blue-light))",
+          medium: "hsl(var(--blue-medium))",
         },
         navy: "hsl(var(--navy))",
-        orange: "hsl(var(--orange))",
+        maroon: "hsl(var(--maroon))",
         success: "hsl(var(--success))",
       },
       borderRadius: {

@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import jigsonLogo from "@/assets/jigson-logo.jpg";
 
 const footerLinks = {
   company: [
@@ -46,11 +47,12 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="space-y-6">
-            <Link to="/" className="flex items-center gap-3">
-              <div className="w-11 h-11 rounded-2xl bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-extrabold text-xl">P</span>
-              </div>
-              <span className="text-xl font-bold">PharmaCare</span>
+            <Link to="/" className="inline-block">
+              <img 
+                src={jigsonLogo} 
+                alt="Jigson Pharmaceuticals" 
+                className="h-14 w-auto bg-background rounded-lg p-2"
+              />
             </Link>
             <p className="text-background/60 text-sm leading-relaxed">
               Leading pharmaceutical manufacturer committed to delivering high-quality, 
@@ -134,7 +136,7 @@ export const Footer = () => {
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-background/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-background/50">
-            © 2024 PharmaCare. All rights reserved.
+            © 2024 Jigson Pharmaceuticals. All rights reserved.
           </p>
           <div className="flex gap-6">
             <a href="#" className="text-sm text-background/50 hover:text-background transition-colors">

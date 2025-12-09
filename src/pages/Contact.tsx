@@ -33,8 +33,8 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    details: ["info@pharmacare.com", "sales@pharmacare.com"],
-    color: "bg-emerald-light text-emerald-medium",
+    details: ["info@jigsonpharma.com", "sales@jigsonpharma.com"],
+    color: "bg-blue-light text-blue-medium",
   },
   {
     icon: Clock,
@@ -45,11 +45,11 @@ const contactInfo = [
 ];
 
 const departments = [
-  { name: "General Inquiries", email: "info@pharmacare.com" },
-  { name: "Sales & Orders", email: "sales@pharmacare.com" },
-  { name: "Partnership", email: "partners@pharmacare.com" },
-  { name: "Quality Assurance", email: "quality@pharmacare.com" },
-  { name: "Export Division", email: "export@pharmacare.com" },
+  { name: "General Inquiries", email: "info@jigsonpharma.com" },
+  { name: "Sales & Orders", email: "sales@jigsonpharma.com" },
+  { name: "Partnership", email: "partners@jigsonpharma.com" },
+  { name: "Quality Assurance", email: "quality@jigsonpharma.com" },
+  { name: "Export Division", email: "export@jigsonpharma.com" },
 ];
 
 const Contact = () => {

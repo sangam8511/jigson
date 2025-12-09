@@ -6,59 +6,59 @@
 
 @layer base {
   :root {
-    /* Modern Pharmaceutical Palette - Clean, Friendly, Trustworthy */
+    /* Jigson Brand Palette - Blue & Maroon */
     --background: 0 0% 100%;
-    --foreground: 220 20% 15%;
+    --foreground: 210 50% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 20% 15%;
+    --card-foreground: 210 50% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 20% 15%;
+    --popover-foreground: 210 50% 15%;
 
-    /* Primary - Emerald Green - Health & Trust */
-    --primary: 160 84% 28%;
+    /* Primary - Jigson Blue */
+    --primary: 207 100% 35%;
     --primary-foreground: 0 0% 100%;
 
-    /* Secondary - Soft Gray Blue */
-    --secondary: 220 14% 96%;
-    --secondary-foreground: 220 20% 25%;
+    /* Secondary - Soft Blue Gray */
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 210 30% 25%;
 
-    --muted: 220 14% 96%;
-    --muted-foreground: 220 10% 50%;
+    --muted: 210 20% 96%;
+    --muted-foreground: 210 15% 50%;
 
-    /* Accent - Warm Orange for CTAs */
-    --accent: 25 95% 55%;
+    /* Accent - Jigson Maroon */
+    --accent: 0 65% 32%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 14% 92%;
-    --input: 220 14% 92%;
-    --ring: 160 84% 28%;
+    --border: 210 20% 92%;
+    --input: 210 20% 92%;
+    --ring: 207 100% 35%;
 
     --radius: 1rem;
 
     /* Custom Colors */
-    --emerald-light: 160 60% 95%;
-    --emerald-medium: 160 70% 40%;
-    --navy: 220 40% 20%;
-    --orange: 25 95% 55%;
+    --blue-light: 207 60% 95%;
+    --blue-medium: 207 90% 45%;
+    --navy: 210 50% 20%;
+    --maroon: 0 65% 32%;
     --success: 160 60% 40%;
 
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(160 30% 97%) 0%, hsl(160 40% 94%) 50%, hsl(0 0% 100%) 100%);
-    --gradient-primary: linear-gradient(135deg, hsl(160 84% 28%) 0%, hsl(160 70% 35%) 100%);
-    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(220 14% 98%) 100%);
-    --gradient-dark: linear-gradient(135deg, hsl(220 40% 15%) 0%, hsl(220 40% 25%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(207 30% 97%) 0%, hsl(207 40% 94%) 50%, hsl(0 0% 100%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(207 100% 35%) 0%, hsl(207 90% 45%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 20% 98%) 100%);
+    --gradient-dark: linear-gradient(135deg, hsl(210 50% 15%) 0%, hsl(210 50% 25%) 100%);
 
     /* Shadows */
-    --shadow-xs: 0 1px 2px hsl(220 20% 15% / 0.04);
-    --shadow-sm: 0 2px 8px -2px hsl(220 20% 15% / 0.06);
-    --shadow-md: 0 8px 24px -8px hsl(220 20% 15% / 0.08);
-    --shadow-lg: 0 20px 40px -12px hsl(220 20% 15% / 0.12);
-    --shadow-glow: 0 0 40px hsl(160 84% 28% / 0.12);
+    --shadow-xs: 0 1px 2px hsl(210 50% 15% / 0.04);
+    --shadow-sm: 0 2px 8px -2px hsl(210 50% 15% / 0.06);
+    --shadow-md: 0 8px 24px -8px hsl(210 50% 15% / 0.08);
+    --shadow-lg: 0 20px 40px -12px hsl(210 50% 15% / 0.12);
+    --shadow-glow: 0 0 40px hsl(207 100% 35% / 0.12);
 
     /* Sidebar */
     --sidebar-background: 0 0% 98%;
@@ -72,33 +72,33 @@
   }
 
   .dark {
-    --background: 220 25% 8%;
+    --background: 210 30% 8%;
     --foreground: 0 0% 98%;
 
-    --card: 220 25% 12%;
+    --card: 210 30% 12%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 220 25% 12%;
+    --popover: 210 30% 12%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 160 70% 45%;
-    --primary-foreground: 220 25% 8%;
+    --primary: 207 90% 50%;
+    --primary-foreground: 210 30% 8%;
 
-    --secondary: 220 20% 18%;
+    --secondary: 210 25% 18%;
     --secondary-foreground: 0 0% 90%;
 
-    --muted: 220 20% 15%;
-    --muted-foreground: 220 10% 60%;
+    --muted: 210 25% 15%;
+    --muted-foreground: 210 15% 60%;
 
-    --accent: 25 90% 55%;
+    --accent: 0 60% 45%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 20% 20%;
-    --input: 220 20% 20%;
-    --ring: 160 70% 45%;
+    --border: 210 25% 20%;
+    --input: 210 25% 20%;
+    --ring: 207 90% 50%;
 
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
@@ -143,7 +143,7 @@
   }
 
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-emerald-medium;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-medium;
   }
 
   .hover-lift {

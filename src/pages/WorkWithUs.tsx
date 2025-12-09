@@ -131,7 +131,7 @@ const WorkWithUs = () => {
               Partnership Opportunities
             </span>
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6 animate-fade-up delay-100">
-              Grow Your Business With PharmaCare
+              Grow Your Business With Jigson
             </h1>
             <p className="text-lg text-muted-foreground animate-fade-up delay-200">
               Join our network of trusted healthcare partners and experience the 
@@ -218,7 +218,7 @@ const WorkWithUs = () => {
                 What You Get as Our Partner
               </h2>
               <p className="text-muted-foreground mb-8">
-                When you partner with PharmaCare, you gain access to a comprehensive 
+                When you partner with Jigson Pharmaceuticals, you gain access to a comprehensive 
                 support ecosystem designed to help your business thrive.
               </p>
               <ul className="space-y-4">

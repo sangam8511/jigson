@@ -198,7 +198,7 @@ const Products = () => {
                 key={product.id}
                 className="group bg-card rounded-2xl border border-border overflow-hidden hover-lift"
               >
-                <div className="h-40 bg-gradient-to-br from-primary/5 to-teal-light flex items-center justify-center">
+                <div className="h-40 bg-gradient-to-br from-primary/5 to-blue-light flex items-center justify-center">
                   <Pill className="w-16 h-16 text-primary/30 group-hover:text-primary/50 transition-colors" />
                 </div>
                 <div className="p-6">
@@ -244,7 +244,7 @@ const Products = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-gradient-to-r from-primary to-teal-medium text-primary-foreground">
+      <section className="section-padding bg-gradient-to-r from-primary to-blue-medium text-primary-foreground">
         <div className="container-wide text-center">
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
             Need Custom Formulations?
