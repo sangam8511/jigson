@@ -21,19 +21,19 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Head Office",
-    details: ["123 Pharma Street", "Industrial Area, Andheri East", "Mumbai, Maharashtra 400093"],
+    details: ["Jigson Pharmaceuticals Pvt. Ltd.", "Prime Estate, Near Ujala Cross Road", "Tal. Sarkhej, Ahmedabad - 382210"],
     color: "bg-primary/10 text-primary",
   },
   {
     icon: Phone,
     title: "Phone",
-    details: ["+91 22 1234 5678", "+91 22 8765 4321"],
+    details: ["+91 9714103005", "+91 9714033005"],
     color: "bg-accent/10 text-accent",
   },
   {
     icon: Mail,
     title: "Email",
-    details: ["info@jigsonpharma.com", "sales@jigsonpharma.com"],
+    details: ["jigson2016@gmail.com"],
     color: "bg-blue-light text-blue-medium",
   },
   {
@@ -45,11 +45,9 @@ const contactInfo = [
 ];
 
 const departments = [
-  { name: "General Inquiries", email: "info@jigsonpharma.com" },
-  { name: "Sales & Orders", email: "sales@jigsonpharma.com" },
-  { name: "Partnership", email: "partners@jigsonpharma.com" },
-  { name: "Quality Assurance", email: "quality@jigsonpharma.com" },
-  { name: "Export Division", email: "export@jigsonpharma.com" },
+  { name: "General Inquiries", email: "jigson2016@gmail.com" },
+  { name: "Sales & Orders", email: "jigson2016@gmail.com" },
+  { name: "Partnership", email: "jigson2016@gmail.com" },
 ];
 
 const Contact = () => {
@@ -256,8 +254,8 @@ const Contact = () => {
                 <ul className="space-y-3">
                   {[
                     "Quick response within 24 hours",
-                    "Dedicated account managers",
-                    "Technical product support",
+                    "Dedicated partnership support",
+                    "Technical product guidance",
                     "Custom formulation requests",
                   ].map((item, index) => (
                     <li key={index} className="flex items-center gap-3">
@@ -298,7 +296,10 @@ const Contact = () => {
         <div className="text-center">
           <MapPin className="w-16 h-16 text-primary/30 mx-auto mb-4" />
           <p className="text-muted-foreground font-medium">
-            Interactive Google Maps integration available
+            Ahmedabad, Gujarat, India
+          </p>
+          <p className="text-sm text-muted-foreground mt-2">
+            Near Ujala Cross Road, Sarkhej
           </p>
         </div>
       </section>

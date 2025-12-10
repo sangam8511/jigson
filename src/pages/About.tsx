@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Target, Eye, Users, Award, Lightbulb, Heart } from "lucide-react";
+import { ArrowRight, Target, Eye, Award, Lightbulb, Heart, Shield, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
 import aboutLab from "@/assets/about-lab.jpg";
@@ -7,50 +7,47 @@ import aboutLab from "@/assets/about-lab.jpg";
 const values = [
   {
     icon: Award,
-    title: "Quality Excellence",
-    description: "Unwavering commitment to the highest standards in pharmaceutical manufacturing.",
+    title: "Quality First",
+    description: "Every product meets strict global standards.",
+  },
+  {
+    icon: Shield,
+    title: "Safety Always",
+    description: "Child-friendly, stable, and dependable formulations.",
+  },
+  {
+    icon: Heart,
+    title: "Integrity",
+    description: "Transparent processes and ethical practices in everything we do.",
   },
   {
     icon: Lightbulb,
     title: "Innovation",
-    description: "Continuous research and development to bring cutting-edge solutions.",
-  },
-  {
-    icon: Heart,
-    title: "Patient-Centric",
-    description: "Every decision we make is guided by patient safety and well-being.",
+    description: "Continuously improving with research-driven development.",
   },
   {
     icon: Users,
-    title: "Collaboration",
-    description: "Building strong partnerships with healthcare providers worldwide.",
+    title: "Responsibility",
+    description: "Caring for communities, partners, and young patients worldwide.",
   },
 ];
 
 const founders = [
   {
-    name: "Dr. Rajesh Kumar",
-    role: "Founder & CEO",
-    bio: "With over 30 years in pharmaceutical research, Dr. Kumar founded Jigson Pharmaceuticals with a vision to make quality healthcare accessible globally.",
+    name: "Jignesh Acharya",
+    role: "D.Pharm, Biotechnology, MBA",
+    bio: "Jignesh leads the product, research, and formulation development side of Jigson. With a strong scientific and pharma background, he ensures every product meets high stability, quality, and safety benchmarks.",
   },
   {
-    name: "Dr. Meera Patel",
-    role: "Co-Founder & CSO",
-    bio: "A pioneer in drug formulation, Dr. Patel leads our R&D initiatives and has contributed to over 200 successful product launches.",
+    name: "Hetal Acharya",
+    role: "B.Com, M.Com",
+    bio: "Hetal manages the operations, coordination, and day-to-day functioning of the company. Her structured approach keeps production, supply, and communication running smoothly.",
   },
   {
-    name: "Vikram Singh",
-    role: "Co-Founder & COO",
-    bio: "Expert in pharmaceutical manufacturing operations, Vikram ensures our facilities maintain the highest international standards.",
+    name: "Shail Surresh Thakkar",
+    role: "BBA, MBA",
+    bio: "A creative thinker and experienced businessman, Shail handles accounts, strategy, and business planning. His practical approach and financial oversight help Jigson run efficiently and sustainably.",
   },
-];
-
-const milestones = [
-  { year: "2003", title: "Founded", description: "Jigson Pharmaceuticals established in Mumbai" },
-  { year: "2008", title: "WHO-GMP Certified", description: "Achieved international certification" },
-  { year: "2012", title: "Global Expansion", description: "Started exporting to 20+ countries" },
-  { year: "2018", title: "R&D Center", description: "Launched advanced research facility" },
-  { year: "2023", title: "500+ Products", description: "Milestone in product portfolio" },
 ];
 
 const About = () => {
@@ -62,14 +59,27 @@ const About = () => {
         <div className="container-wide relative z-10">
           <div className="max-w-3xl">
             <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6 animate-fade-up">
-              About Jigson
+              About Us
             </span>
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6 animate-fade-up delay-100">
-              Pioneering Healthcare Excellence Since 2003
+              Specialising in Paediatric Healthcare Since 2016
             </h1>
             <p className="text-lg text-muted-foreground animate-fade-up delay-200">
-              For over two decades, we have been at the forefront of pharmaceutical innovation, 
-              delivering life-changing medicines to millions of patients worldwide.
+              At Jigson Pharma, we specialise in paediatric healthcare, creating formulations that are 
+              safe, stable, and scientifically designed for growing children. Our focus has been simple — 
+              quality you can trust and care you can rely on.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* About Content */}
+      <section className="section-padding bg-background">
+        <div className="container-wide">
+          <div className="max-w-4xl mx-auto text-center mb-16">
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              With strong manufacturing standards and a commitment to child-friendly solutions, 
+              Jigson has grown into a dependable partner for doctors, hospitals, distributors, and parents.
             </p>
           </div>
         </div>
@@ -86,18 +96,9 @@ const About = () => {
               </div>
               <h2 className="font-display text-2xl font-bold text-foreground mb-4">Our Mission</h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                To provide affordable, high-quality pharmaceutical products that improve 
-                patient outcomes globally. We are committed to innovation, sustainability, 
-                and ethical business practices in everything we do.
+                To provide safe, high-quality paediatric medicines that support healthier childhoods, 
+                backed by scientific research, strict compliance, and a commitment to consistent care.
               </p>
-              <ul className="space-y-3">
-                {["Quality without compromise", "Accessible healthcare solutions", "Sustainable manufacturing"].map((item, index) => (
-                  <li key={index} className="flex items-center gap-3 text-sm text-foreground">
-                    <div className="w-2 h-2 rounded-full bg-primary" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
             </div>
 
             {/* Vision */}
@@ -107,18 +108,9 @@ const About = () => {
               </div>
               <h2 className="font-display text-2xl font-bold mb-4">Our Vision</h2>
               <p className="text-primary-foreground/90 leading-relaxed mb-6">
-                To become a global leader in pharmaceutical manufacturing, recognized 
-                for our commitment to quality, innovation, and positive impact on 
-                healthcare systems worldwide.
+                To become a globally trusted name in paediatric healthcare, known for our reliability, 
+                innovation, and dedication to improving children's wellbeing across markets.
               </p>
-              <ul className="space-y-3">
-                {["Global healthcare partner", "Innovation-driven growth", "Trusted by millions"].map((item, index) => (
-                  <li key={index} className="flex items-center gap-3 text-sm">
-                    <div className="w-2 h-2 rounded-full bg-primary-foreground" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
             </div>
           </div>
         </div>
@@ -135,7 +127,7 @@ const About = () => {
               The Principles That Guide Us
             </h2>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
             {values.map((value, index) => (
               <div
                 key={index}
@@ -152,43 +144,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Journey Timeline */}
-      <section className="section-padding bg-secondary/50">
-        <div className="container-wide">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
-              Our Journey
-            </span>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Milestones of Excellence
-            </h2>
-          </div>
-          <div className="relative">
-            {/* Timeline Line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-border hidden md:block" />
-            
-            <div className="space-y-8">
-              {milestones.map((milestone, index) => (
-                <div
-                  key={index}
-                  className={`flex items-center gap-8 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
-                >
-                  <div className={`flex-1 ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
-                    <div className="bg-card rounded-2xl p-6 border border-border hover-lift inline-block">
-                      <div className="text-primary font-display font-bold text-xl mb-2">{milestone.year}</div>
-                      <h3 className="font-semibold text-foreground mb-1">{milestone.title}</h3>
-                      <p className="text-sm text-muted-foreground">{milestone.description}</p>
-                    </div>
-                  </div>
-                  <div className="hidden md:flex w-4 h-4 rounded-full bg-primary relative z-10" />
-                  <div className="flex-1 hidden md:block" />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Founders */}
       <section className="section-padding bg-card">
         <div className="container-wide">
@@ -200,7 +155,7 @@ const About = () => {
               Meet Our Founders
             </h2>
             <p className="text-muted-foreground">
-              Visionary leaders with decades of combined experience in pharmaceuticals.
+              Visionary leaders driving Jigson's mission in paediatric healthcare.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -230,7 +185,7 @@ const About = () => {
             <div className="relative rounded-3xl overflow-hidden">
               <img
                 src={aboutLab}
-                alt="Jigson Pharmaceuticals Laboratory"
+                alt="Jigson Pharmaceuticals Facility"
                 className="w-full h-[400px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/30 to-transparent" />
@@ -243,17 +198,16 @@ const About = () => {
                 State-of-the-Art Manufacturing
               </h2>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                Our manufacturing facilities span over 100,000 sq. ft. and are equipped 
-                with the latest technology for pharmaceutical production. Every unit 
-                operates under strict GMP guidelines and is regularly audited by 
-                international regulatory bodies.
+                Our manufacturing facilities are equipped with the latest technology for pharmaceutical 
+                production. Every unit operates under strict GMP guidelines and is regularly audited by 
+                international regulatory bodies including FDA, WHO-GMP, and EU-GMP standards.
               </p>
               <div className="grid grid-cols-2 gap-4 mb-8">
                 {[
-                  { value: "100,000+", label: "Sq. Ft. Facility" },
-                  { value: "500+", label: "Skilled Staff" },
-                  { value: "10", label: "Production Lines" },
-                  { value: "24/7", label: "Quality Control" },
+                  { value: "FDA", label: "Approved" },
+                  { value: "WHO-GMP", label: "Certified" },
+                  { value: "EU-GMP", label: "Compliant" },
+                  { value: "40+", label: "Products" },
                 ].map((stat, index) => (
                   <div key={index} className="bg-card rounded-xl p-4 border border-border">
                     <div className="font-display text-2xl font-bold text-primary">{stat.value}</div>
@@ -263,7 +217,7 @@ const About = () => {
               </div>
               <Button variant="default" size="lg" asChild>
                 <Link to="/contact">
-                  Schedule a Visit
+                  Get in Touch
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </Button>
