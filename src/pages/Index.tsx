@@ -1,54 +1,73 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, CheckCircle2, Star, Users, Award, Pill, Truck, ShieldCheck, HeartPulse } from "lucide-react";
+import { ArrowRight, CheckCircle2, Star, Users, Award, Pill, Clock, ShieldCheck, HeartPulse, Baby, Droplets, Syringe, Package } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
 import heroPharma from "@/assets/hero-pharma.jpg";
 import productHero from "@/assets/product-hero.jpg";
 
 const stats = [
-  { value: "20+", label: "Years Experience", icon: Award },
-  { value: "500+", label: "Products", icon: Pill },
-  { value: "50+", label: "Countries", icon: Truck },
-  { value: "100M+", label: "Lives Touched", icon: HeartPulse },
+  { value: "10+", label: "Years Experience", icon: Award },
+  { value: "40+", label: "Products", icon: Pill },
+  { value: "100+", label: "Lives Touched", icon: HeartPulse },
 ];
 
 const categories = [
-  { name: "Tablets", icon: "💊", count: "150+ Products" },
-  { name: "Capsules", icon: "💉", count: "80+ Products" },
-  { name: "Syrups", icon: "🧴", count: "60+ Products" },
-  { name: "Injectables", icon: "💉", count: "45+ Products" },
-  { name: "Nutraceuticals", icon: "🌿", count: "70+ Products" },
-  { name: "Skincare", icon: "✨", count: "35+ Products" },
+  { name: "Tablets", icon: "💊", count: "Oral Formulations" },
+  { name: "Capsules", icon: "💉", count: "Easy to Swallow" },
+  { name: "Syrups", icon: "🧴", count: "Liquid Forms" },
+  { name: "Drops", icon: "💧", count: "Precise Dosing" },
+  { name: "Dry Syrups", icon: "📦", count: "Powder Form" },
 ];
 
 const certifications = [
-  { name: "WHO-GMP", description: "Certified" },
-  { name: "ISO 9001:2015", description: "Quality Management" },
   { name: "FDA Approved", description: "US Standards" },
-  { name: "CE Marked", description: "European Compliance" },
+  { name: "WHO-GMP", description: "Certified" },
+  { name: "EU-GMP", description: "Compliant" },
+];
+
+const bestsellers = [
+  { name: "Spobio CL", category: "Probiotic", description: "Gut health support for children" },
+  { name: "KIDORS", category: "Paediatric", description: "Essential paediatric formulation" },
+  { name: "MEROAIM", category: "Antibiotic", description: "Trusted infection treatment" },
+  { name: "TINNIGO", category: "Supplement", description: "Nutritional support" },
+  { name: "KIDWITS", category: "Brain Health", description: "Cognitive development support" },
 ];
 
 const reviews = [
   {
-    name: "Dr. Sarah Chen",
-    role: "Chief Pharmacist, City Hospital",
-    content: "Jigson Pharmaceuticals has been our trusted supplier for over 5 years. Their commitment to quality and timely delivery is exceptional.",
+    name: "Dr. Ritu Sharma",
+    role: "Paediatrician",
+    content: "I use Jigson's medicines for many of my young patients. They work well, are safe, and parents find them easy to use. It's a brand I trust in daily practice.",
     rating: 5,
-    image: "SC",
+    image: "RS",
   },
   {
-    name: "Michael Roberts",
-    role: "Procurement Director, Global Health",
-    content: "The consistency in product quality and their responsive customer service makes them stand out in the pharmaceutical industry.",
+    name: "S. Patel",
+    role: "Pharma Distributor",
+    content: "Working with Jigson has been smooth. Their products are consistent, paperwork is clear, and deliveries come on time. It makes our job easier.",
     rating: 5,
-    image: "MR",
+    image: "SP",
   },
   {
-    name: "Dr. Priya Sharma",
-    role: "Medical Director, HealthPlus",
-    content: "Their extensive range of formulations and competitive pricing has made them our primary pharmaceutical partner.",
+    name: "R. Singh",
+    role: "Hospital Procurement Manager",
+    content: "We've been ordering Jigson products for a long time. Quality is steady, no complaints from doctors, and all compliance documents are always in place.",
     rating: 5,
-    image: "PS",
+    image: "RS",
+  },
+  {
+    name: "Pooja Agarwal",
+    role: "Parent",
+    content: "My child's doctor suggested Jigson. The medicine suited my kid well and showed results quickly. I feel comfortable using their products now.",
+    rating: 5,
+    image: "PA",
+  },
+  {
+    name: "Dr. Harsh Mehta",
+    role: "Child Care Clinic Owner",
+    content: "In our clinic, we prefer brands that are dependable. Jigson's paediatric range has been reliable for years, and kids respond well to their formulations.",
+    rating: 5,
+    image: "HM",
   },
 ];
 
@@ -65,27 +84,28 @@ const Index = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-up">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-6">
-                <ShieldCheck className="w-4 h-4" />
-                WHO-GMP Certified Manufacturer
+                <Baby className="w-4 h-4" />
+                Paediatric Healthcare Specialists
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-foreground leading-[1.1] mb-6">
-                Your Trusted
-                <span className="block text-primary">Online Pharmacy</span>
-                for Every Need
+                Trusted Paediatric Care,
+                <span className="block text-primary">Backed by Science.</span>
               </h1>
-              <p className="text-lg text-muted-foreground mb-8 max-w-lg leading-relaxed">
-                Delivering world-class pharmaceutical formulations with unwavering 
-                commitment to quality, innovation, and patient well-being.
+              <p className="text-lg text-muted-foreground mb-4 max-w-lg leading-relaxed">
+                High-quality paediatric formulations you can rely on for your kids.
+              </p>
+              <p className="text-base text-muted-foreground mb-8 max-w-lg">
+                Made with care, consistency, and clinical expertise.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button variant="hero" size="xl" asChild>
                   <Link to="/products">
-                    Shop Now
+                    Explore Products
                     <ArrowRight className="w-5 h-5" />
                   </Link>
                 </Button>
                 <Button variant="outline" size="xl" asChild>
-                  <Link to="/about">Explore More</Link>
+                  <Link to="/about">About Us</Link>
                 </Button>
               </div>
               
@@ -93,20 +113,20 @@ const Index = () => {
               <div className="flex items-center gap-6 mt-10 pt-8 border-t border-border">
                 <div className="flex items-center gap-2">
                   <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
-                    <Truck className="w-5 h-5 text-primary" />
+                    <ShieldCheck className="w-5 h-5 text-primary" />
                   </div>
                   <div>
-                    <div className="text-sm font-semibold">Free Delivery</div>
-                    <div className="text-xs text-muted-foreground">On orders over ₹500</div>
+                    <div className="text-sm font-semibold">WHO-GMP</div>
+                    <div className="text-xs text-muted-foreground">Certified</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center">
-                    <ShieldCheck className="w-5 h-5 text-accent" />
+                    <Award className="w-5 h-5 text-accent" />
                   </div>
                   <div>
-                    <div className="text-sm font-semibold">100% Genuine</div>
-                    <div className="text-xs text-muted-foreground">Certified products</div>
+                    <div className="text-sm font-semibold">FDA Approved</div>
+                    <div className="text-xs text-muted-foreground">Standards</div>
                   </div>
                 </div>
               </div>
@@ -116,7 +136,7 @@ const Index = () => {
               <div className="relative rounded-[2rem] overflow-hidden shadow-large">
                 <img
                   src={heroPharma}
-                  alt="Pharmaceutical Products"
+                  alt="Paediatric Pharmaceutical Products"
                   className="w-full h-[520px] object-cover"
                 />
               </div>
@@ -124,11 +144,11 @@ const Index = () => {
               <div className="absolute -bottom-6 -left-6 bg-card p-5 rounded-2xl shadow-large border border-border animate-float">
                 <div className="flex items-center gap-4">
                   <div className="w-14 h-14 rounded-2xl bg-primary flex items-center justify-center">
-                    <Users className="w-7 h-7 text-primary-foreground" />
+                    <Clock className="w-7 h-7 text-primary-foreground" />
                   </div>
                   <div>
-                    <div className="text-2xl font-bold text-foreground">50K+</div>
-                    <div className="text-sm text-muted-foreground">Happy Customers</div>
+                    <div className="text-2xl font-bold text-foreground">Since 2016</div>
+                    <div className="text-sm text-muted-foreground">Trusted Partner</div>
                   </div>
                 </div>
               </div>
@@ -140,7 +160,7 @@ const Index = () => {
                       <Star key={i} className="w-4 h-4 fill-accent text-accent" />
                     ))}
                   </div>
-                  <span className="font-bold">4.9</span>
+                  <span className="font-bold">Trusted</span>
                 </div>
               </div>
             </div>
@@ -151,7 +171,7 @@ const Index = () => {
       {/* Stats Section */}
       <section className="py-16 bg-card border-y border-border">
         <div className="container-wide">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-3 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
@@ -172,17 +192,17 @@ const Index = () => {
             <div>
               <span className="badge badge-primary mb-3">Categories</span>
               <h2 className="text-3xl md:text-4xl font-extrabold text-foreground">
-                Shop by Category
+                Our Product Range
               </h2>
             </div>
             <Button variant="ghost" asChild className="hidden md:flex">
               <Link to="/products">
-                View All Categories
+                View All Products
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </Button>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {categories.map((category, index) => (
               <Link
                 key={index}
@@ -200,47 +220,33 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Featured Products */}
+      {/* Bestseller Products */}
       <section className="section-padding bg-secondary/50">
         <div className="container-wide">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <span className="badge badge-primary mb-3">Featured</span>
             <h2 className="text-3xl md:text-4xl font-extrabold text-foreground mb-4">
-              Today's Best Deals
+              Bestseller Products
             </h2>
             <p className="text-muted-foreground">
-              Discover our most popular pharmaceutical products at competitive prices.
+              Our most trusted paediatric formulations recommended by healthcare professionals.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { name: "Vitamin C 500mg", category: "Supplements", price: "₹299", oldPrice: "₹399", discount: "25%" },
-              { name: "Omega-3 Fish Oil", category: "Heart Health", price: "₹599", oldPrice: "₹799", discount: "25%" },
-              { name: "Multivitamin Tablets", category: "Daily Health", price: "₹449", oldPrice: "₹549", discount: "18%" },
-              { name: "Calcium + D3", category: "Bone Health", price: "₹349", oldPrice: "₹449", discount: "22%" },
-            ].map((product, index) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+            {bestsellers.map((product, index) => (
               <div
                 key={index}
                 className="group bg-card rounded-2xl border border-border overflow-hidden hover:shadow-medium transition-all duration-300"
               >
-                <div className="relative h-48 bg-gradient-to-br from-blue-light to-secondary flex items-center justify-center">
-                  <Pill className="w-20 h-20 text-primary/20 group-hover:text-primary/30 transition-colors" />
-                  <span className="absolute top-3 left-3 bg-accent text-accent-foreground text-xs font-bold px-3 py-1 rounded-full">
-                    {product.discount} OFF
-                  </span>
+                <div className="relative h-32 bg-gradient-to-br from-blue-light to-secondary flex items-center justify-center">
+                  <Pill className="w-12 h-12 text-primary/30 group-hover:text-primary/50 transition-colors" />
                 </div>
                 <div className="p-5">
                   <span className="text-xs text-muted-foreground">{product.category}</span>
-                  <h3 className="font-bold text-foreground mt-1 mb-3 group-hover:text-primary transition-colors">
+                  <h3 className="font-bold text-foreground mt-1 mb-2 group-hover:text-primary transition-colors">
                     {product.name}
                   </h3>
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <span className="text-lg font-bold text-primary">{product.price}</span>
-                      <span className="text-sm text-muted-foreground line-through">{product.oldPrice}</span>
-                    </div>
-                    <Button variant="pill" size="sm">Add</Button>
-                  </div>
+                  <p className="text-xs text-muted-foreground">{product.description}</p>
                 </div>
               </div>
             ))}
@@ -267,25 +273,24 @@ const Index = () => {
                 </div>
                 <div className="h-52 rounded-2xl bg-primary flex items-center justify-center text-primary-foreground p-6">
                   <div className="text-center">
-                    <div className="text-4xl font-extrabold">20+</div>
-                    <div className="text-sm opacity-80 mt-1">Years of Trust</div>
+                    <div className="text-4xl font-extrabold">2016</div>
+                    <div className="text-sm opacity-80 mt-1">Since Then</div>
                   </div>
                 </div>
               </div>
             </div>
             <div>
-              <span className="badge badge-primary mb-4">About Jigson</span>
+              <span className="badge badge-primary mb-4">About Jigson Pharma</span>
               <h2 className="text-3xl md:text-4xl font-extrabold text-foreground mb-6">
-                Pioneering Excellence in Pharmaceutical Manufacturing
+                Specialised Paediatric Formulations Built on Quality & Safety
               </h2>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                With over two decades of experience, Jigson Pharmaceuticals has established itself as a 
-                trusted name in pharmaceutical manufacturing. Our state-of-the-art facilities, 
-                combined with rigorous quality control measures, ensure that every product 
-                meets the highest international standards.
+                Since 2016, Jigson Pharma has been delivering specialised paediatric formulations 
+                built on quality, safety, and scientific precision. We focus on high-quality, 
+                high-standard and high-stability products trusted by healthcare professionals.
               </p>
               <div className="space-y-4 mb-8">
-                {["WHO-GMP Certified Manufacturing", "500+ Product Formulations", "Export to 50+ Countries"].map((item, index) => (
+                {["FDA Approved Standards", "WHO-GMP Certified Manufacturing", "EU-GMP Compliant Facility"].map((item, index) => (
                   <div key={index} className="flex items-center gap-3">
                     <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center">
                       <CheckCircle2 className="w-4 h-4 text-primary" />
@@ -310,7 +315,7 @@ const Index = () => {
         <div className="container-wide">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="text-center md:text-left">
-              <h3 className="text-2xl font-bold mb-2">Our Quality Certifications</h3>
+              <h3 className="text-2xl font-bold mb-2">Our Global Approvals</h3>
               <p className="text-primary-foreground/70">
                 Committed to the highest international standards
               </p>
@@ -336,11 +341,40 @@ const Index = () => {
           <div className="text-center max-w-2xl mx-auto mb-12">
             <span className="badge badge-primary mb-3">Testimonials</span>
             <h2 className="text-3xl md:text-4xl font-extrabold text-foreground mb-4">
-              What Our Customers Say
+              What Our Partners Say
             </h2>
           </div>
-          <div className="grid md:grid-cols-3 gap-6">
-            {reviews.map((review, index) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {reviews.slice(0, 3).map((review, index) => (
+              <div
+                key={index}
+                className="bg-card rounded-2xl p-8 border border-border hover-lift"
+              >
+                <div className="flex gap-1 mb-4">
+                  {[...Array(review.rating)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 fill-accent text-accent" />
+                  ))}
+                </div>
+                <p className="text-muted-foreground mb-6 leading-relaxed">
+                  "{review.content}"
+                </p>
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
+                    <span className="font-bold text-primary-foreground">
+                      {review.image}
+                    </span>
+                  </div>
+                  <div>
+                    <div className="font-bold text-foreground">{review.name}</div>
+                    <div className="text-sm text-muted-foreground">{review.role}</div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+          {/* Additional Reviews Row */}
+          <div className="grid md:grid-cols-2 gap-6 mt-6">
+            {reviews.slice(3).map((review, index) => (
               <div
                 key={index}
                 className="bg-card rounded-2xl p-8 border border-border hover-lift"
@@ -377,17 +411,17 @@ const Index = () => {
             Ready to Partner With Us?
           </h2>
           <p className="text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-            Join our global network of healthcare partners and experience the 
-            Jigson difference in quality, reliability, and innovation.
+            Join our network of healthcare partners and experience the 
+            Jigson difference in quality, reliability, and paediatric expertise.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button variant="accent" size="xl" asChild>
               <Link to="/work-with-us">
-                Start Partnership
+                Partner With Us
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </Button>
-            <Button variant="glass" size="xl" className="text-primary-foreground border-primary-foreground/30" asChild>
+            <Button variant="outline" size="xl" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10" asChild>
               <Link to="/contact">Contact Us</Link>
             </Button>
           </div>

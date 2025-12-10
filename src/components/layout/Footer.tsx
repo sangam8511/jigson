@@ -12,10 +12,10 @@ const footerLinks = {
     { name: "Contact", href: "/contact" },
   ],
   products: [
-    { name: "Tablets & Capsules", href: "/products" },
-    { name: "Injectables", href: "/products" },
-    { name: "Oral Liquids", href: "/products" },
-    { name: "Nutraceuticals", href: "/products" },
+    { name: "Tablets", href: "/products" },
+    { name: "Capsules", href: "/products" },
+    { name: "Syrups", href: "/products" },
+    { name: "Dry Syrups", href: "/products" },
   ],
 };
 
@@ -55,8 +55,8 @@ export const Footer = () => {
               />
             </Link>
             <p className="text-background/60 text-sm leading-relaxed">
-              Leading pharmaceutical manufacturer committed to delivering high-quality, 
-              innovative healthcare solutions for a healthier tomorrow.
+              Specialising in paediatric healthcare since 2016. Creating safe, stable, 
+              and scientifically designed formulations for growing children.
             </p>
             <div className="flex gap-2">
               {[
@@ -118,16 +118,16 @@ export const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                 <span className="text-sm text-background/60">
-                  123 Pharma Street, Industrial Area, Mumbai, India 400001
+                  Prime Estate, Near Ujala Cross Road, Tal. Sarkhej, Ahmedabad - 382210
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-primary shrink-0" />
-                <span className="text-sm text-background/60">+91 22 1234 5678</span>
+                <span className="text-sm text-background/60">+91 9714103005, +91 9714033005</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-primary shrink-0" />
-                <span className="text-sm text-background/60">info@pharmacare.com</span>
+                <span className="text-sm text-background/60">jigson2016@gmail.com</span>
               </li>
             </ul>
           </div>
@@ -136,7 +136,7 @@ export const Footer = () => {
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-background/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-background/50">
-            © 2024 Jigson Pharmaceuticals. All rights reserved.
+            © 2024 Jigson Pharmaceuticals Pvt. Ltd. All rights reserved.
           </p>
           <div className="flex gap-6">
             <a href="#" className="text-sm text-background/50 hover:text-background transition-colors">

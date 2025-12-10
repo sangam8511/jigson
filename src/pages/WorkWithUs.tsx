@@ -10,9 +10,11 @@ import {
   Award,
   Clock,
   Shield,
-  Zap,
+  Package,
   Users,
-  Send
+  Send,
+  Store,
+  Hospital
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -22,67 +24,77 @@ import { useToast } from "@/hooks/use-toast";
 
 const whoWeWorkWith = [
   {
-    icon: Building2,
+    icon: Truck,
+    title: "Distributors & Stockists",
+    description: "Strategic distribution partnerships for efficient market coverage.",
+  },
+  {
+    icon: Hospital,
     title: "Hospitals & Clinics",
-    description: "Direct supply partnerships with healthcare institutions for consistent pharmaceutical access.",
+    description: "Direct supply partnerships with healthcare institutions.",
   },
   {
     icon: Stethoscope,
-    title: "Pharmacies & Chains",
-    description: "Bulk supply agreements with retail pharmacy networks and chains nationwide.",
+    title: "Paediatricians",
+    description: "Trusted by child healthcare specialists across the region.",
   },
   {
-    icon: Truck,
-    title: "Distributors",
-    description: "Strategic alliances with pharmaceutical distributors for efficient market coverage.",
+    icon: Store,
+    title: "Retail Pharmacy Chains",
+    description: "Reliable supply for pharmacy networks nationwide.",
+  },
+  {
+    icon: Building2,
+    title: "Healthcare Institutions",
+    description: "Partnering with established healthcare organizations.",
   },
   {
     icon: Globe,
-    title: "International Partners",
-    description: "Export partnerships with healthcare organizations in 50+ countries worldwide.",
+    title: "Export Partners & International Buyers",
+    description: "Global partnerships for international market expansion.",
   },
 ];
 
 const whyChooseUs = [
   {
     icon: Award,
-    title: "Certified Quality",
-    description: "WHO-GMP, ISO 9001:2015 certified manufacturing ensuring highest standards.",
+    title: "Consistent Product Quality",
+    description: "Every batch meets our strict quality standards.",
   },
   {
-    icon: Clock,
-    title: "On-Time Delivery",
-    description: "99.5% on-time delivery rate with robust supply chain management.",
+    icon: Stethoscope,
+    title: "Strong Paediatric Expertise",
+    description: "Specialised formulations since 2016.",
   },
   {
     icon: Shield,
-    title: "Regulatory Compliance",
-    description: "Full documentation support for regulatory submissions globally.",
+    title: "FDA, WHO-GMP & EU-GMP Approved",
+    description: "Meeting highest international standards.",
   },
   {
-    icon: Zap,
-    title: "Competitive Pricing",
-    description: "Transparent pricing with volume-based discounts for long-term partners.",
+    icon: Package,
+    title: "Transparent Documentation",
+    description: "Clear paperwork and full compliance support.",
   },
   {
-    icon: Users,
-    title: "Dedicated Support",
-    description: "Assigned account managers for personalized partnership experience.",
+    icon: Clock,
+    title: "Stable Formulations",
+    description: "High shelf-life products you can depend on.",
   },
   {
-    icon: CheckCircle2,
-    title: "Custom Solutions",
-    description: "Tailored formulations and private label manufacturing services.",
+    icon: Truck,
+    title: "Timely Delivery",
+    description: "Smooth operations and reliable supply chain.",
   },
 ];
 
 const partnershipBenefits = [
-  "Priority access to new product launches",
-  "Volume-based pricing advantages",
-  "Marketing and promotional support",
-  "Technical training and product education",
-  "Dedicated account management",
-  "Flexible payment terms",
+  "A trusted paediatric range",
+  "Competitive margins & long-term support",
+  "Easy onboarding and clear communication",
+  "Marketing materials (if needed)",
+  "Reliable supply and batch consistency",
+  "A team committed to your growth",
 ];
 
 const WorkWithUs = () => {
@@ -131,11 +143,12 @@ const WorkWithUs = () => {
               Partnership Opportunities
             </span>
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6 animate-fade-up delay-100">
-              Grow Your Business With Jigson
+              Grow Your Business With Us
             </h1>
             <p className="text-lg text-muted-foreground animate-fade-up delay-200">
-              Join our network of trusted healthcare partners and experience the 
-              difference in quality, reliability, and service excellence.
+              Partner with Jigson Pharma and access a reliable paediatric product range backed by science, 
+              strong compliance, and consistent quality. We help you scale with safe, high-standard 
+              formulations trusted across markets.
             </p>
           </div>
         </div>
@@ -151,12 +164,8 @@ const WorkWithUs = () => {
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
               Who We Work With
             </h2>
-            <p className="text-muted-foreground">
-              We partner with diverse healthcare stakeholders to ensure our 
-              products reach those who need them most.
-            </p>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {whoWeWorkWith.map((partner, index) => (
               <div
                 key={index}
@@ -303,10 +312,12 @@ const WorkWithUs = () => {
                     className="w-full h-12 rounded-xl border border-input bg-background px-4 text-foreground"
                   >
                     <option value="">Select your business type</option>
+                    <option value="distributor">Distributor / Stockist</option>
                     <option value="hospital">Hospital / Clinic</option>
-                    <option value="pharmacy">Pharmacy / Chain</option>
-                    <option value="distributor">Distributor</option>
-                    <option value="international">International Partner</option>
+                    <option value="paediatrician">Paediatrician</option>
+                    <option value="pharmacy">Retail Pharmacy Chain</option>
+                    <option value="institution">Healthcare Institution</option>
+                    <option value="export">Export Partner / International Buyer</option>
                     <option value="other">Other</option>
                   </select>
                 </div>
