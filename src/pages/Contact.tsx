@@ -292,15 +292,38 @@ const Contact = () => {
       </section>
 
       {/* Map Section */}
-      <section className="h-80 bg-secondary/50 flex items-center justify-center border-t border-border">
-        <div className="text-center">
-          <MapPin className="w-16 h-16 text-primary/30 mx-auto mb-4" />
-          <p className="text-muted-foreground font-medium">
-            Ahmedabad, Gujarat, India
-          </p>
-          <p className="text-sm text-muted-foreground mt-2">
-            Near Ujala Cross Road, Sarkhej
-          </p>
+      <section className="border-t border-border">
+        <div className="container-wide py-12">
+          <div className="text-center mb-8">
+            <span className="badge badge-primary mb-4">Our Location</span>
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground">
+              Find Us on the Map
+            </h2>
+          </div>
+          <div className="rounded-2xl overflow-hidden border border-border shadow-medium">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.9038459!2d72.4897!3d22.9897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e87359c5f12a5%3A0x70c39f5c5bcc0a1a!2sUjala%20Cross%20Road%2C%20Sarkhej%2C%20Ahmedabad%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1702000000000!5m2!1sen!2sin"
+              width="100%"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Jigson Pharmaceuticals Location"
+              className="w-full"
+            />
+          </div>
+          <div className="mt-6 text-center">
+            <a
+              href="https://www.google.com/maps/search/Jigson+Pharmaceuticals+Prime+Estate+Ujala+Cross+Road+Sarkhej+Ahmedabad"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-primary hover:underline font-medium"
+            >
+              <MapPin className="w-5 h-5" />
+              Get Directions on Google Maps
+            </a>
+          </div>
         </div>
       </section>
     </Layout>
