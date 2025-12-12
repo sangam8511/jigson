@@ -23,7 +23,7 @@ const products = [
     category: "capsules",
     composition: "Caroverine 20 mg Capsule",
     packaging: "10X1X10 (Mono cartoon pack of 1 strip)",
-    mrp: "₹260.00",
+    usage: "For tinnitus (ringing in ears) and inner ear disorders",
   },
   {
     id: 2,
@@ -31,7 +31,7 @@ const products = [
     category: "drysyrup",
     composition: "Amoxycillin Clavulanate 228.5 mg (3.3 GRAM / 30 ML)",
     packaging: "30 ML Glass Bottle + W.F.I. + Measuring Cup",
-    mrp: "₹67.00",
+    usage: "For bacterial infections like respiratory, ear, and urinary tract infections in children",
   },
   {
     id: 3,
@@ -39,7 +39,7 @@ const products = [
     category: "drysyrup",
     composition: "Amoxycillin Clavulanate 228.5 mg (6.6 GRAM / 60 ML)",
     packaging: "60 ML Glass Bottle + W.F.I. + Measuring Cup",
-    mrp: "₹130.00",
+    usage: "For bacterial infections like respiratory, ear, and urinary tract infections in children",
   },
   {
     id: 4,
@@ -47,7 +47,7 @@ const products = [
     category: "drysyrup",
     composition: "Amoxycillin Clavulanate 457 mg (6.6 GRAM / 30 ML)",
     packaging: "30 ML Glass Bottle + W.F.I. + Measuring Cup",
-    mrp: "₹165.00",
+    usage: "For moderate to severe bacterial infections in children",
   },
   {
     id: 5,
@@ -55,7 +55,7 @@ const products = [
     category: "drysyrup",
     composition: "Amoxycillin Clavulanate 457 mg (13.2 GRAM / 60 ML)",
     packaging: "60 ML Glass Bottle + W.F.I. + Measuring Cup",
-    mrp: "₹285.00",
+    usage: "For moderate to severe bacterial infections in children",
   },
   {
     id: 6,
@@ -63,7 +63,7 @@ const products = [
     category: "tablets",
     composition: "Amoxycillin Clavulanate 457 mg Dispersible Tablet (Mango Flavour)",
     packaging: "10X1X10 (Mono cartoon pack of 1 strip)",
-    mrp: "₹190.00",
+    usage: "For bacterial infections - easy to dissolve tablet for children",
   },
   {
     id: 7,
@@ -71,7 +71,7 @@ const products = [
     category: "tablets",
     composition: "Amoxycillin Clavulanate 625 mg Film Coated Tablet",
     packaging: "10X1X10 (Mono cartoon pack of 1 strip)",
-    mrp: "₹195.00",
+    usage: "For bacterial infections in older children and adults",
   },
   {
     id: 8,
@@ -79,7 +79,7 @@ const products = [
     category: "drysyrup",
     composition: "Cefpodoxime 50mg Dry Syrup (15 GM / 30 ML) - Tangy Orange Flavour",
     packaging: "30 ML Glass Bottle + W.F.I. + Measuring Cup",
-    mrp: "₹91.00",
+    usage: "For respiratory tract, skin, and soft tissue infections in children",
   },
   {
     id: 9,
@@ -87,7 +87,7 @@ const products = [
     category: "drysyrup",
     composition: "Cefpodoxime 50mg + Clavulanic Acid 31.25 mg (11 GM / 30 ML) - Mix Fruit Flavour",
     packaging: "30 ML Glass Bottle + W.F.I. + Measuring Cup",
-    mrp: "₹119.00",
+    usage: "For resistant bacterial infections in children",
   },
   {
     id: 10,
@@ -95,7 +95,7 @@ const products = [
     category: "drysyrup",
     composition: "Cefpodoxime 100mg Dry Syrup (15 GM / 30 ML) - Tangy Orange Flavour",
     packaging: "30 ML Glass Bottle + W.F.I. + Measuring Cup",
-    mrp: "₹135.00",
+    usage: "For respiratory tract, skin, and soft tissue infections",
   },
   {
     id: 11,
@@ -103,7 +103,7 @@ const products = [
     category: "drysyrup",
     composition: "Cefpodoxime 100mg + Clavulanic Acid 62.50 mg (13 GM / 30 ML) - Mix Fruit Flavour",
     packaging: "30 ML Glass Bottle + W.F.I. + Measuring Cup",
-    mrp: "₹191.00",
+    usage: "For resistant bacterial infections requiring stronger coverage",
   },
   {
     id: 12,
@@ -111,7 +111,7 @@ const products = [
     category: "tablets",
     composition: "Cefpodoxime 100mg Dispersible Tablet (Strawberry Flavour)",
     packaging: "10X10",
-    mrp: "₹105.00",
+    usage: "For respiratory and urinary tract infections - easy to dissolve",
   },
   {
     id: 13,
@@ -119,7 +119,7 @@ const products = [
     category: "tablets",
     composition: "Cefpodoxime 200mg Film Coated Tablet",
     packaging: "10X10",
-    mrp: "₹165.00",
+    usage: "For moderate to severe bacterial infections",
   },
   {
     id: 14,
@@ -127,7 +127,7 @@ const products = [
     category: "suspension",
     composition: "Mefenamic Acid 100 mg Suspension (Sweet Mango Flavour)",
     packaging: "60ML PET Bottle + Measuring Cup",
-    mrp: "₹37.05",
+    usage: "For pain and fever relief in children",
   },
   {
     id: 15,
@@ -135,7 +135,7 @@ const products = [
     category: "suspension",
     composition: "Paracetamol 250 mg + Mefenamic Acid 100 mg Suspension (Sweet Mango Flavour)",
     packaging: "60ML PET Bottle + Measuring Cup",
-    mrp: "₹47.00",
+    usage: "For fever, pain, and inflammatory conditions in children",
   },
   {
     id: 16,
@@ -143,7 +143,7 @@ const products = [
     category: "suspension",
     composition: "Paracetamol 250 mg + Mefenamic Acid 100 mg Suspension (Sweet Mango Flavour)",
     packaging: "100ML PET Bottle + Measuring Cup",
-    mrp: "₹66.00",
+    usage: "For fever, pain, and inflammatory conditions in children",
   },
   {
     id: 17,
@@ -151,7 +151,7 @@ const products = [
     category: "suspension",
     composition: "Paracetamol 100mg + Ibuprofen 162.5 mg Suspension (Mix Fruit Flavour)",
     packaging: "60ML PET Bottle + Measuring Cup",
-    mrp: "₹38.00",
+    usage: "For fast fever and pain relief in children",
   },
   {
     id: 18,
@@ -159,7 +159,7 @@ const products = [
     category: "suspension",
     composition: "Paracetamol 100mg + Ibuprofen 162.5 mg Suspension (Mix Fruit Flavour)",
     packaging: "100ML PET Bottle + Measuring Cup",
-    mrp: "₹53.00",
+    usage: "For fast fever and pain relief in children",
   },
   {
     id: 19,
@@ -167,7 +167,7 @@ const products = [
     category: "syrup",
     composition: "Phenylephrine 5mg + Chlorpheniramine Maleate 2mg + Dextromethorphan 15mg per 5ml",
     packaging: "100ML PET Bottle + Measuring Cup",
-    mrp: "₹95.00",
+    usage: "For cold, cough, and nasal congestion relief",
   },
   {
     id: 20,
@@ -175,7 +175,7 @@ const products = [
     category: "syrup",
     composition: "Salbutamol 1 mg + Theophyline 50 mg",
     packaging: "100ML PET Bottle + Measuring Cup",
-    mrp: "₹45.00",
+    usage: "For asthma and bronchospasm relief in children",
   },
   {
     id: 21,
@@ -183,7 +183,7 @@ const products = [
     category: "capsules",
     composition: "Domperidone 30mg + Rabeprazole 20mg",
     packaging: "Foil Packaging Strip",
-    mrp: "₹85.00",
+    usage: "For acid reflux, gastritis, and nausea relief",
   },
   {
     id: 22,
@@ -191,7 +191,7 @@ const products = [
     category: "capsules",
     composition: "Domperidone 30mg + Pantoprazole 40mg",
     packaging: "Foil Packaging Strip",
-    mrp: "₹99.00",
+    usage: "For acid reflux, gastritis, and digestive disorders",
   },
   {
     id: 23,
@@ -199,7 +199,7 @@ const products = [
     category: "tablets",
     composition: "Ambroxol 75mg + Levocetirizine 5mg + Montelukast 10mg",
     packaging: "ALU-ALU",
-    mrp: "₹125.00",
+    usage: "For allergic respiratory conditions, cough, and congestion",
   },
   {
     id: 24,
@@ -207,7 +207,7 @@ const products = [
     category: "injection",
     composition: "Ceftriaxone 1 GM Injection",
     packaging: "Injection + WFI",
-    mrp: "₹65.00",
+    usage: "For severe bacterial infections requiring IV/IM administration",
   },
   {
     id: 25,
@@ -215,7 +215,7 @@ const products = [
     category: "injection",
     composition: "Ceftriaxone 1 GM + Sulbactam 500 MG",
     packaging: "Injection + WFI",
-    mrp: "₹205.00",
+    usage: "For serious resistant bacterial infections",
   },
   {
     id: 26,
@@ -223,7 +223,7 @@ const products = [
     category: "injection",
     composition: "Piperacillin 4 GM + Tazobactum 500 Mg",
     packaging: "Injection + WFI",
-    mrp: "₹405.00",
+    usage: "For severe hospital-acquired and resistant infections",
   },
   {
     id: 27,
@@ -231,7 +231,7 @@ const products = [
     category: "injection",
     composition: "Piperacillin 1 GM + Tazobactum 125 Mg",
     packaging: "Injection + WFI",
-    mrp: "₹95.00",
+    usage: "For moderate to severe bacterial infections",
   },
   {
     id: 28,
@@ -239,7 +239,7 @@ const products = [
     category: "injection",
     composition: "Pantoprazole 40 Mg",
     packaging: "Injection + WFI",
-    mrp: "₹49.00",
+    usage: "For gastric acid suppression in hospitalized patients",
   },
   {
     id: 29,
@@ -247,7 +247,8 @@ const products = [
     category: "injection",
     composition: "Meropenem 1 GM",
     packaging: "Injection + WFI",
-    mrp: "₹925.00",
+    usage: "For serious multi-drug resistant bacterial infections",
+    highlight: true,
   },
   {
     id: 30,
@@ -255,7 +256,7 @@ const products = [
     category: "injection",
     composition: "Meropenem 500 Mg",
     packaging: "Injection + WFI",
-    mrp: "₹525.00",
+    usage: "For serious multi-drug resistant bacterial infections",
   },
   {
     id: 31,
@@ -263,7 +264,7 @@ const products = [
     category: "suspension",
     composition: "Azithromycin 200mg/5ml",
     packaging: "30ML PET Bottle + Measuring Cup",
-    mrp: "₹90.00",
+    usage: "For respiratory tract, skin, and ear infections",
   },
   {
     id: 32,
@@ -271,7 +272,7 @@ const products = [
     category: "suspension",
     composition: "Drotaverine 20mg/5ml",
     packaging: "60ML PET Bottle + Measuring Cup",
-    mrp: "₹75.00",
+    usage: "For abdominal cramps and smooth muscle spasms",
   },
   {
     id: 33,
@@ -279,7 +280,7 @@ const products = [
     category: "suspension",
     composition: "Chlorpheniramine 2mg + Paracetamol 250mg + Phenylephrine 5mg + Sodium Citrate 60mg",
     packaging: "60ML PET Bottle + Measuring Cup",
-    mrp: "₹69.00",
+    usage: "For cold, flu symptoms, fever, and nasal congestion",
   },
   {
     id: 34,
@@ -287,7 +288,7 @@ const products = [
     category: "suspension",
     composition: "2 Billion Spores of Poly-antibiotic Resistance Bacillus Clausii (Original Strains)",
     packaging: "5 ML Mini Bottle / 10 Mini Bottles per Box",
-    mrp: "₹47.00/Mini Bottle",
+    usage: "For gut health restoration and diarrhea management, globally available",
     highlight: true,
   },
   {
@@ -296,7 +297,7 @@ const products = [
     category: "sachet",
     composition: "WHO Recommended ORS Formulation + Zinc 10 mg + Probiotics",
     packaging: "5 GM Sachet",
-    mrp: "₹19.00/Sachet",
+    usage: "For diarrhea and electrolyte imbalance management - affordable and effective",
     highlight: true,
   },
   {
@@ -305,7 +306,7 @@ const products = [
     category: "syrup",
     composition: "Advance Iron + Multivitamin + Multi Mineral + Zinc + Vitamin C + Vitamin D + Amino Acid + Antioxidants",
     packaging: "100 ML",
-    mrp: "₹95.00",
+    usage: "For complete nutritional support and healthy growth in children",
     highlight: true,
   },
   {
@@ -314,7 +315,7 @@ const products = [
     category: "syrup",
     composition: "Advance Iron + Multivitamin + Multi Mineral + Zinc + Vitamin C + Vitamin D + Amino Acid + Antioxidants",
     packaging: "200 ML",
-    mrp: "₹185.00",
+    usage: "For complete nutritional support and healthy growth in children",
     highlight: true,
   },
   {
@@ -323,7 +324,7 @@ const products = [
     category: "sachet",
     composition: "Advanced 37 Vital Nutritional Support to Children (Chocolate Flavour)",
     packaging: "200 GM",
-    mrp: "₹330.00",
+    usage: "For comprehensive nutritional and protein support in children",
     highlight: true,
   },
 ];
@@ -403,7 +404,7 @@ const Products = () => {
                   product.highlight ? "border-primary/50 ring-2 ring-primary/20" : "border-border"
                 }`}
               >
-                <div className={`h-32 flex items-center justify-center ${
+                <div className={`h-32 flex items-center justify-center relative ${
                   product.highlight 
                     ? "bg-gradient-to-br from-primary/10 to-accent/10" 
                     : "bg-gradient-to-br from-primary/5 to-blue-light"
@@ -425,18 +426,15 @@ const Products = () => {
                   <h3 className="font-display text-base font-semibold text-foreground mb-2 line-clamp-2">
                     {product.name}
                   </h3>
-                  <p className="text-sm text-muted-foreground mb-4 line-clamp-2">
+                  <p className="text-sm text-muted-foreground mb-3 line-clamp-2">
                     {product.composition}
                   </p>
-                  <div className="space-y-2 text-sm">
-                    <div className="flex justify-between">
-                      <span className="text-muted-foreground">Packaging:</span>
-                      <span className="text-foreground font-medium text-right text-xs max-w-[60%]">{product.packaging}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-muted-foreground">MRP:</span>
-                      <span className="text-primary font-bold">{product.mrp}</span>
-                    </div>
+                  <div className="bg-primary/5 rounded-lg p-3 mb-3">
+                    <span className="text-xs font-medium text-primary">Used For:</span>
+                    <p className="text-xs text-foreground mt-1">{product.usage}</p>
+                  </div>
+                  <div className="text-xs text-muted-foreground">
+                    <span className="font-medium">Pack:</span> {product.packaging}
                   </div>
                 </div>
               </div>

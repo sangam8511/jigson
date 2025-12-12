@@ -356,7 +356,7 @@ const Index = () => {
                   ))}
                 </div>
                 <p className="text-muted-foreground mb-6 leading-relaxed">
-                  "{review.content}"
+                  {review.content}
                 </p>
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
@@ -385,7 +385,7 @@ const Index = () => {
                   ))}
                 </div>
                 <p className="text-muted-foreground mb-6 leading-relaxed">
-                  "{review.content}"
+                  {review.content}
                 </p>
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
