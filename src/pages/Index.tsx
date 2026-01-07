@@ -4,76 +4,104 @@ import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
 import heroPharma from "@/assets/hero-pharma.jpg";
 import productHero from "@/assets/product-hero.jpg";
-
-const stats = [
-  { value: "10+", label: "Years Experience", icon: Award },
-  { value: "40+", label: "Products", icon: Pill },
-  { value: "100+", label: "Lives Touched", icon: HeartPulse },
-];
-
-const categories = [
-  { name: "Tablets", icon: "💊", count: "Oral Formulations" },
-  { name: "Capsules", icon: "💉", count: "Easy to Swallow" },
-  { name: "Syrups", icon: "🧴", count: "Liquid Forms" },
-  { name: "Drops", icon: "💧", count: "Precise Dosing" },
-  { name: "Dry Syrups", icon: "📦", count: "Powder Form" },
-];
-
-const certifications = [
-  { name: "FDA Approved", description: "US Standards" },
-  { name: "WHO-GMP", description: "Certified" },
-  { name: "EU-GMP", description: "Compliant" },
-];
-
-const bestsellers = [
-  { name: "Spobio CL", category: "Probiotic", description: "Gut health support for children" },
-  { name: "KIDORS", category: "Paediatric", description: "Essential paediatric formulation" },
-  { name: "MEROAIM", category: "Antibiotic", description: "Trusted infection treatment" },
-  { name: "TINNIGO", category: "Supplement", description: "Nutritional support" },
-  { name: "KIDWITS", category: "Brain Health", description: "Cognitive development support" },
-];
-
-const reviews = [
-  {
-    name: "Dr. Ritu Sharma",
-    role: "Paediatrician",
-    content: "I use Jigson's medicines for many of my young patients. They work well, are safe, and parents find them easy to use. It's a brand I trust in daily practice.",
-    rating: 5,
-    image: "RS",
-  },
-  {
-    name: "S. Patel",
-    role: "Pharma Distributor",
-    content: "Working with Jigson has been smooth. Their products are consistent, paperwork is clear, and deliveries come on time. It makes our job easier.",
-    rating: 5,
-    image: "SP",
-  },
-  {
-    name: "R. Singh",
-    role: "Hospital Procurement Manager",
-    content: "We've been ordering Jigson products for a long time. Quality is steady, no complaints from doctors, and all compliance documents are always in place.",
-    rating: 5,
-    image: "RS",
-  },
-  {
-    name: "Pooja Agarwal",
-    role: "Parent",
-    content: "My child's doctor suggested Jigson. The medicine suited my kid well and showed results quickly. I feel comfortable using their products now.",
-    rating: 5,
-    image: "PA",
-  },
-  {
-    name: "Dr. Harsh Mehta",
-    role: "Child Care Clinic Owner",
-    content: "In our clinic, we prefer brands that are dependable. Jigson's paediatric range has been reliable for years, and kids respond well to their formulations.",
-    rating: 5,
-    image: "HM",
-  },
-];
-
+const stats = [{
+  value: "10+",
+  label: "Years Experience",
+  icon: Award
+}, {
+  value: "40+",
+  label: "Products",
+  icon: Pill
+}, {
+  value: "100+",
+  label: "Lives Touched",
+  icon: HeartPulse
+}];
+const categories = [{
+  name: "Tablets",
+  icon: "💊",
+  count: "Oral Formulations"
+}, {
+  name: "Capsules",
+  icon: "💉",
+  count: "Easy to Swallow"
+}, {
+  name: "Syrups",
+  icon: "🧴",
+  count: "Liquid Forms"
+}, {
+  name: "Drops",
+  icon: "💧",
+  count: "Precise Dosing"
+}, {
+  name: "Dry Syrups",
+  icon: "📦",
+  count: "Powder Form"
+}];
+const certifications = [{
+  name: "FDA Approved",
+  description: "US Standards"
+}, {
+  name: "WHO-GMP",
+  description: "Certified"
+}, {
+  name: "EU-GMP",
+  description: "Compliant"
+}];
+const bestsellers = [{
+  name: "Spobio CL",
+  category: "Probiotic",
+  description: "Gut health support for children"
+}, {
+  name: "KIDORS",
+  category: "Paediatric",
+  description: "Essential paediatric formulation"
+}, {
+  name: "MEROAIM",
+  category: "Antibiotic",
+  description: "Trusted infection treatment"
+}, {
+  name: "TINNIGO",
+  category: "Supplement",
+  description: "Nutritional support"
+}, {
+  name: "KIDWITS",
+  category: "Brain Health",
+  description: "Cognitive development support"
+}];
+const reviews = [{
+  name: "Dr. Ritu Sharma",
+  role: "Paediatrician",
+  content: "I use Jigson's medicines for many of my young patients. They work well, are safe, and parents find them easy to use. It's a brand I trust in daily practice.",
+  rating: 5,
+  image: "RS"
+}, {
+  name: "S. Patel",
+  role: "Pharma Distributor",
+  content: "Working with Jigson has been smooth. Their products are consistent, paperwork is clear, and deliveries come on time. It makes our job easier.",
+  rating: 5,
+  image: "SP"
+}, {
+  name: "R. Singh",
+  role: "Hospital Procurement Manager",
+  content: "We've been ordering Jigson products for a long time. Quality is steady, no complaints from doctors, and all compliance documents are always in place.",
+  rating: 5,
+  image: "RS"
+}, {
+  name: "Pooja Agarwal",
+  role: "Parent",
+  content: "My child's doctor suggested Jigson. The medicine suited my kid well and showed results quickly. I feel comfortable using their products now.",
+  rating: 5,
+  image: "PA"
+}, {
+  name: "Dr. Harsh Mehta",
+  role: "Child Care Clinic Owner",
+  content: "In our clinic, we prefer brands that are dependable. Jigson's paediatric range has been reliable for years, and kids respond well to their formulations.",
+  rating: 5,
+  image: "HM"
+}];
 const Index = () => {
-  return (
-    <Layout>
+  return <Layout>
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-gradient-hero">
         {/* Decorative Elements */}
@@ -134,11 +162,7 @@ const Index = () => {
             
             <div className="relative animate-fade-up delay-200">
               <div className="relative rounded-[2rem] overflow-hidden shadow-large">
-                <img
-                  src={heroPharma}
-                  alt="Paediatric Pharmaceutical Products"
-                  className="w-full h-[520px] object-cover"
-                />
+                <img alt="Paediatric Pharmaceutical Products" className="w-full h-[520px] object-cover" src="/lovable-uploads/9484fcd4-5ac0-4044-b26b-a63786aa6040.png" />
               </div>
               {/* Floating Stats Card */}
               <div className="absolute -bottom-6 -left-6 bg-card p-5 rounded-2xl shadow-large border border-border animate-float">
@@ -156,9 +180,7 @@ const Index = () => {
               <div className="absolute top-6 -right-4 bg-card px-4 py-3 rounded-2xl shadow-large border border-border">
                 <div className="flex items-center gap-2">
                   <div className="flex gap-0.5">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-accent text-accent" />
-                    ))}
+                    {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-accent text-accent" />)}
                   </div>
                   <span className="font-bold">Trusted</span>
                 </div>
@@ -172,15 +194,13 @@ const Index = () => {
       <section className="py-16 bg-card border-y border-border">
         <div className="container-wide">
           <div className="grid grid-cols-3 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
+            {stats.map((stat, index) => <div key={index} className="text-center">
                 <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-7 h-7 text-primary" />
                 </div>
                 <div className="text-3xl font-extrabold text-foreground mb-1">{stat.value}</div>
                 <div className="text-sm text-muted-foreground">{stat.label}</div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -203,19 +223,13 @@ const Index = () => {
             </Button>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-            {categories.map((category, index) => (
-              <Link
-                key={index}
-                to="/products"
-                className="group bg-card rounded-2xl p-6 border border-border hover:border-primary/30 hover:shadow-medium transition-all duration-300 text-center"
-              >
+            {categories.map((category, index) => <Link key={index} to="/products" className="group bg-card rounded-2xl p-6 border border-border hover:border-primary/30 hover:shadow-medium transition-all duration-300 text-center">
                 <div className="text-4xl mb-4">{category.icon}</div>
                 <h3 className="font-bold text-foreground mb-1 group-hover:text-primary transition-colors">
                   {category.name}
                 </h3>
                 <p className="text-xs text-muted-foreground">{category.count}</p>
-              </Link>
-            ))}
+              </Link>)}
           </div>
         </div>
       </section>
@@ -233,11 +247,7 @@ const Index = () => {
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
-            {bestsellers.map((product, index) => (
-              <div
-                key={index}
-                className="group bg-card rounded-2xl border border-border overflow-hidden hover:shadow-medium transition-all duration-300"
-              >
+            {bestsellers.map((product, index) => <div key={index} className="group bg-card rounded-2xl border border-border overflow-hidden hover:shadow-medium transition-all duration-300">
                 <div className="relative h-32 bg-gradient-to-br from-blue-light to-secondary flex items-center justify-center">
                   <Pill className="w-12 h-12 text-primary/30 group-hover:text-primary/50 transition-colors" />
                 </div>
@@ -248,8 +258,7 @@ const Index = () => {
                   </h3>
                   <p className="text-xs text-muted-foreground">{product.description}</p>
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -264,7 +273,7 @@ const Index = () => {
                   <Award className="w-16 h-16 text-primary/40" />
                 </div>
                 <div className="h-36 rounded-2xl overflow-hidden">
-                  <img src={productHero} alt="Products" className="w-full h-full object-cover" />
+                  <img alt="Products" className="w-full h-full object-cover" src="/lovable-uploads/9874a558-8de0-4f8c-9453-fa8ea2159015.png" />
                 </div>
               </div>
               <div className="space-y-4 pt-8">
@@ -290,14 +299,12 @@ const Index = () => {
                 high-standard and high-stability products trusted by healthcare professionals.
               </p>
               <div className="space-y-4 mb-8">
-                {["FDA Approved Standards", "WHO-GMP Certified Manufacturing", "EU-GMP Compliant Facility"].map((item, index) => (
-                  <div key={index} className="flex items-center gap-3">
+                {["FDA Approved Standards", "WHO-GMP Certified Manufacturing", "EU-GMP Compliant Facility"].map((item, index) => <div key={index} className="flex items-center gap-3">
                     <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center">
                       <CheckCircle2 className="w-4 h-4 text-primary" />
                     </div>
                     <span className="text-foreground font-medium">{item}</span>
-                  </div>
-                ))}
+                  </div>)}
               </div>
               <Button variant="default" size="lg" asChild>
                 <Link to="/about">
@@ -321,15 +328,10 @@ const Index = () => {
               </p>
             </div>
             <div className="flex flex-wrap justify-center gap-4">
-              {certifications.map((cert, index) => (
-                <div
-                  key={index}
-                  className="bg-primary-foreground/10 backdrop-blur-sm px-6 py-4 rounded-2xl text-center min-w-[140px]"
-                >
+              {certifications.map((cert, index) => <div key={index} className="bg-primary-foreground/10 backdrop-blur-sm px-6 py-4 rounded-2xl text-center min-w-[140px]">
                   <div className="font-bold">{cert.name}</div>
                   <div className="text-sm text-primary-foreground/70">{cert.description}</div>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </div>
@@ -345,15 +347,9 @@ const Index = () => {
             </h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {reviews.slice(0, 3).map((review, index) => (
-              <div
-                key={index}
-                className="bg-card rounded-2xl p-8 border border-border hover-lift"
-              >
+            {reviews.slice(0, 3).map((review, index) => <div key={index} className="bg-card rounded-2xl p-8 border border-border hover-lift">
                 <div className="flex gap-1 mb-4">
-                  {[...Array(review.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-accent text-accent" />
-                  ))}
+                  {[...Array(review.rating)].map((_, i) => <Star key={i} className="w-5 h-5 fill-accent text-accent" />)}
                 </div>
                 <p className="text-muted-foreground mb-6 leading-relaxed">
                   {review.content}
@@ -369,20 +365,13 @@ const Index = () => {
                     <div className="text-sm text-muted-foreground">{review.role}</div>
                   </div>
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
           {/* Additional Reviews Row */}
           <div className="grid md:grid-cols-2 gap-6 mt-6">
-            {reviews.slice(3).map((review, index) => (
-              <div
-                key={index}
-                className="bg-card rounded-2xl p-8 border border-border hover-lift"
-              >
+            {reviews.slice(3).map((review, index) => <div key={index} className="bg-card rounded-2xl p-8 border border-border hover-lift">
                 <div className="flex gap-1 mb-4">
-                  {[...Array(review.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-accent text-accent" />
-                  ))}
+                  {[...Array(review.rating)].map((_, i) => <Star key={i} className="w-5 h-5 fill-accent text-accent" />)}
                 </div>
                 <p className="text-muted-foreground mb-6 leading-relaxed">
                   {review.content}
@@ -398,8 +387,7 @@ const Index = () => {
                     <div className="text-sm text-muted-foreground">{review.role}</div>
                   </div>
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -427,8 +415,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>;
 };
-
 export default Index;
