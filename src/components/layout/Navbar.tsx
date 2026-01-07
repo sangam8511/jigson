@@ -103,11 +103,11 @@ export const Navbar = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
           >
             <a 
-              href="tel:+912212345678" 
+              href="tel:+919714103005" 
               className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
             >
               <Phone className="w-4 h-4" />
-              +91 22 1234 5678
+              +91 97141 03005
             </a>
             <Button variant="hero" asChild>
               <Link to="/contact">Get Started</Link>
