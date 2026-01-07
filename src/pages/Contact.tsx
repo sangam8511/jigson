@@ -27,7 +27,7 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Phone",
-    details: ["+91 9714103005", "+91 9714033005"],
+    details: ["+91 97141 03005"],
     color: "bg-accent/10 text-accent",
   },
   {
