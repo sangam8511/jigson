@@ -9,7 +9,7 @@ const stats = [{
   label: "Years Experience",
   icon: Award
 }, {
-  value: "40+",
+  value: "60+",
   label: "Products",
   icon: Pill
 }, {
