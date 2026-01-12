@@ -2,8 +2,9 @@ import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle2, Star, Users, Award, Pill, Clock, ShieldCheck, HeartPulse, Baby, Droplets, Syringe, Package } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
-import heroPharma from "@/assets/hero-pharma.jpg";
-import productHero from "@/assets/product-hero.jpg";
+import alairzixLc from "@/assets/products/alairzix-lc.jpg";
+import cetzixAm from "@/assets/products/cetzix-am.jpg";
+import cetzixDx from "@/assets/products/cetzix-dx.jpg";
 const stats = [{
   value: "10+",
   label: "Years Experience",
@@ -162,7 +163,7 @@ const Index = () => {
             
             <div className="relative animate-fade-up delay-200">
               <div className="relative rounded-[2rem] overflow-hidden shadow-large">
-                <img alt="Paediatric Pharmaceutical Products" className="w-full h-[520px] object-cover" src="/lovable-uploads/9484fcd4-5ac0-4044-b26b-a63786aa6040.png" />
+                <img alt="Paediatric Pharmaceutical Products" className="w-full h-[520px] object-cover" src={alairzixLc} />
               </div>
               {/* Floating Stats Card */}
               <div className="absolute -bottom-6 -left-6 bg-card p-5 rounded-2xl shadow-large border border-border animate-float">
@@ -273,7 +274,7 @@ const Index = () => {
                   <Award className="w-16 h-16 text-primary/40" />
                 </div>
                 <div className="h-36 rounded-2xl overflow-hidden">
-                  <img alt="Products" className="w-full h-full object-cover" src="/lovable-uploads/9874a558-8de0-4f8c-9453-fa8ea2159015.png" />
+                  <img alt="Products" className="w-full h-full object-cover" src={cetzixAm} />
                 </div>
               </div>
               <div className="space-y-4 pt-8">
