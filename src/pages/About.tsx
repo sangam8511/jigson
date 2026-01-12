@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Target, Eye, Award, Lightbulb, Heart, Shield, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Layout } from "@/components/layout/Layout";
-import aboutLab from "@/assets/about-lab.jpg";
+import cetzixDx3d from "@/assets/products/cetzix-dx-3d.jpg";
 
 const values = [
   {
@@ -184,9 +184,9 @@ const About = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="relative rounded-3xl overflow-hidden">
               <img
-                src={aboutLab}
-                alt="Jigson Pharmaceuticals Facility"
-                className="w-full h-[400px] object-cover"
+                src={cetzixDx3d}
+                alt="Jigson Pharmaceuticals Product"
+                className="w-full h-[400px] object-contain bg-gradient-to-br from-gray-50 to-gray-100"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/30 to-transparent" />
             </div>
