@@ -186,7 +186,7 @@ const About = () => {
               <img
                 src={cetzixDx3d}
                 alt="Jigson Pharmaceuticals Product"
-                className="w-full h-[400px] object-contain bg-gradient-to-br from-gray-50 to-gray-100"
+                className="w-full h-[400px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/30 to-transparent" />
             </div>
