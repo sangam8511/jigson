@@ -16,6 +16,16 @@ import jixclav457 from "@/assets/products/jixclav-457.jpg";
 import jixclav625 from "@/assets/products/jixclav-625.jpg";
 import jixclavForte from "@/assets/products/jixclav-forte.jpg";
 import jixclavXl from "@/assets/products/jixclav-xl.jpg";
+import jixclav from "@/assets/products/jixclav.jpg";
+import jixpod50100 from "@/assets/products/jixpod-50-100.jpg";
+import jixpod100 from "@/assets/products/jixpod-100.jpg";
+import jixpod200 from "@/assets/products/jixpod-200.jpg";
+import jixpodCv50 from "@/assets/products/jixpod-cv-50.jpg";
+import jixpodCv100 from "@/assets/products/jixpod-cv-100.jpg";
+import kidros1 from "@/assets/products/kidros-1.jpg";
+import kidros2 from "@/assets/products/kidros-2.jpg";
+import kidwitsPowder from "@/assets/products/kidwits-powder.jpg";
+import kidwits from "@/assets/products/kidwits.jpg";
 
 const categories = [
   { id: "all", name: "All Products", icon: Pill },
@@ -44,6 +54,7 @@ const products = [
     composition: "Amoxycillin Clavulanate 228.5 mg (3.3 GRAM / 30 ML)",
     packaging: "30 ML Glass Bottle + W.F.I. + Measuring Cup",
     usage: "For bacterial infections like respiratory, ear, and urinary tract infections in children",
+    image: jixclav,
   },
   {
     id: 3,
@@ -97,6 +108,7 @@ const products = [
     composition: "Cefpodoxime 50mg Dry Syrup (15 GM / 30 ML) - Tangy Orange Flavour",
     packaging: "30 ML Glass Bottle + W.F.I. + Measuring Cup",
     usage: "For respiratory tract, skin, and soft tissue infections in children",
+    image: jixpod50100,
   },
   {
     id: 9,
@@ -105,6 +117,7 @@ const products = [
     composition: "Cefpodoxime 50mg + Clavulanic Acid 31.25 mg (11 GM / 30 ML) - Mix Fruit Flavour",
     packaging: "30 ML Glass Bottle + W.F.I. + Measuring Cup",
     usage: "For resistant bacterial infections in children",
+    image: jixpodCv50,
   },
   {
     id: 10,
@@ -113,6 +126,7 @@ const products = [
     composition: "Cefpodoxime 100mg Dry Syrup (15 GM / 30 ML) - Tangy Orange Flavour",
     packaging: "30 ML Glass Bottle + W.F.I. + Measuring Cup",
     usage: "For respiratory tract, skin, and soft tissue infections",
+    image: jixpod100,
   },
   {
     id: 11,
@@ -121,6 +135,7 @@ const products = [
     composition: "Cefpodoxime 100mg + Clavulanic Acid 62.50 mg (13 GM / 30 ML) - Mix Fruit Flavour",
     packaging: "30 ML Glass Bottle + W.F.I. + Measuring Cup",
     usage: "For resistant bacterial infections requiring stronger coverage",
+    image: jixpodCv100,
   },
   {
     id: 12,
@@ -129,6 +144,7 @@ const products = [
     composition: "Cefpodoxime 100mg Dispersible Tablet (Strawberry Flavour)",
     packaging: "10X10",
     usage: "For respiratory and urinary tract infections - easy to dissolve",
+    image: jixpod100,
   },
   {
     id: 13,
@@ -137,6 +153,7 @@ const products = [
     composition: "Cefpodoxime 200mg Film Coated Tablet",
     packaging: "10X10",
     usage: "For moderate to severe bacterial infections",
+    image: jixpod200,
   },
   {
     id: 14,
@@ -322,6 +339,7 @@ const products = [
     packaging: "5 GM Sachet",
     usage: "For diarrhea and electrolyte imbalance management - affordable and effective",
     highlight: true,
+    image: kidros1,
   },
   {
     id: 36,
@@ -331,6 +349,7 @@ const products = [
     packaging: "100 ML",
     usage: "For complete nutritional support and healthy growth in children",
     highlight: true,
+    image: kidwits,
   },
   {
     id: 37,
@@ -340,6 +359,7 @@ const products = [
     packaging: "200 ML",
     usage: "For complete nutritional support and healthy growth in children",
     highlight: true,
+    image: kidwits,
   },
   {
     id: 38,
@@ -349,6 +369,7 @@ const products = [
     packaging: "200 GM",
     usage: "For comprehensive nutritional and protein support in children",
     highlight: true,
+    image: kidwitsPowder,
   },
 ];
 
