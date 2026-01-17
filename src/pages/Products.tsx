@@ -26,6 +26,15 @@ import kidros1 from "@/assets/products/kidros-1.jpg";
 import kidros2 from "@/assets/products/kidros-2.jpg";
 import kidwitsPowder from "@/assets/products/kidwits-powder.jpg";
 import kidwits from "@/assets/products/kidwits.jpg";
+import meropaim from "@/assets/products/meropaim.jpg";
+import panzixDsr from "@/assets/products/panzix-dsr.jpg";
+import panzix from "@/assets/products/panzix.jpg";
+import piptix from "@/assets/products/piptix.jpg";
+import rabzixDsr from "@/assets/products/rabzix-dsr.jpg";
+import spobioCl from "@/assets/products/spobio-cl.jpg";
+import tavpolMf from "@/assets/products/tavpol-mf.jpg";
+import tawibro from "@/assets/products/tawibro.jpg";
+import tinnigo from "@/assets/products/tinnigo.jpg";
 
 const categories = [
   { id: "all", name: "All Products", icon: Pill },
@@ -46,6 +55,7 @@ const products = [
     composition: "Caroverine 20 mg Capsule",
     packaging: "10X1X10 (Mono cartoon pack of 1 strip)",
     usage: "For tinnitus (ringing in ears) and inner ear disorders",
+    image: tinnigo,
   },
   {
     id: 2,
@@ -162,6 +172,7 @@ const products = [
     composition: "Mefenamic Acid 100 mg Suspension (Sweet Mango Flavour)",
     packaging: "60ML PET Bottle + Measuring Cup",
     usage: "For pain and fever relief in children",
+    image: tavpolMf,
   },
   {
     id: 15,
@@ -170,6 +181,7 @@ const products = [
     composition: "Paracetamol 250 mg + Mefenamic Acid 100 mg Suspension (Sweet Mango Flavour)",
     packaging: "60ML PET Bottle + Measuring Cup",
     usage: "For fever, pain, and inflammatory conditions in children",
+    image: tavpolMf,
   },
   {
     id: 16,
@@ -178,6 +190,7 @@ const products = [
     composition: "Paracetamol 250 mg + Mefenamic Acid 100 mg Suspension (Sweet Mango Flavour)",
     packaging: "100ML PET Bottle + Measuring Cup",
     usage: "For fever, pain, and inflammatory conditions in children",
+    image: tavpolMf,
   },
   {
     id: 17,
@@ -186,6 +199,7 @@ const products = [
     composition: "Paracetamol 100mg + Ibuprofen 162.5 mg Suspension (Mix Fruit Flavour)",
     packaging: "60ML PET Bottle + Measuring Cup",
     usage: "For fast fever and pain relief in children",
+    image: tawibro,
   },
   {
     id: 18,
@@ -194,6 +208,7 @@ const products = [
     composition: "Paracetamol 100mg + Ibuprofen 162.5 mg Suspension (Mix Fruit Flavour)",
     packaging: "100ML PET Bottle + Measuring Cup",
     usage: "For fast fever and pain relief in children",
+    image: tawibro,
   },
   {
     id: 19,
@@ -220,6 +235,7 @@ const products = [
     composition: "Domperidone 30mg + Rabeprazole 20mg",
     packaging: "Foil Packaging Strip",
     usage: "For acid reflux, gastritis, and nausea relief",
+    image: rabzixDsr,
   },
   {
     id: 22,
@@ -228,6 +244,7 @@ const products = [
     composition: "Domperidone 30mg + Pantoprazole 40mg",
     packaging: "Foil Packaging Strip",
     usage: "For acid reflux, gastritis, and digestive disorders",
+    image: panzixDsr,
   },
   {
     id: 23,
@@ -261,6 +278,7 @@ const products = [
     composition: "Piperacillin 4 GM + Tazobactum 500 Mg",
     packaging: "Injection + WFI",
     usage: "For severe hospital-acquired and resistant infections",
+    image: piptix,
   },
   {
     id: 27,
@@ -269,6 +287,7 @@ const products = [
     composition: "Piperacillin 1 GM + Tazobactum 125 Mg",
     packaging: "Injection + WFI",
     usage: "For moderate to severe bacterial infections",
+    image: piptix,
   },
   {
     id: 28,
@@ -277,6 +296,7 @@ const products = [
     composition: "Pantoprazole 40 Mg",
     packaging: "Injection + WFI",
     usage: "For gastric acid suppression in hospitalized patients",
+    image: panzix,
   },
   {
     id: 29,
@@ -286,6 +306,7 @@ const products = [
     packaging: "Injection + WFI",
     usage: "For serious multi-drug resistant bacterial infections",
     highlight: true,
+    image: meropaim,
   },
   {
     id: 30,
@@ -294,6 +315,7 @@ const products = [
     composition: "Meropenem 500 Mg",
     packaging: "Injection + WFI",
     usage: "For serious multi-drug resistant bacterial infections",
+    image: meropaim,
   },
   {
     id: 31,
@@ -330,6 +352,7 @@ const products = [
     packaging: "5 ML Mini Bottle / 10 Mini Bottles per Box",
     usage: "For gut health restoration and diarrhea management, globally available",
     highlight: true,
+    image: spobioCl,
   },
   {
     id: 35,
