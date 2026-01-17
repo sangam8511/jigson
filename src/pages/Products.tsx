@@ -5,6 +5,18 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Layout } from "@/components/layout/Layout";
 
+// Product Images
+import aizixXl from "@/assets/products/aizix-xl.jpg";
+import alairzix3d from "@/assets/products/alairzix-3d.jpg";
+import asthazix from "@/assets/products/asthazix.jpg";
+import coldBoy from "@/assets/products/cold-boy.jpg";
+import droteam from "@/assets/products/droteam.jpg";
+import jixclavForteXl from "@/assets/products/jixclav-forte-xl.jpg";
+import jixclav457 from "@/assets/products/jixclav-457.jpg";
+import jixclav625 from "@/assets/products/jixclav-625.jpg";
+import jixclavForte from "@/assets/products/jixclav-forte.jpg";
+import jixclavXl from "@/assets/products/jixclav-xl.jpg";
+
 const categories = [
   { id: "all", name: "All Products", icon: Pill },
   { id: "capsules", name: "Capsules", icon: Pill },
@@ -40,6 +52,7 @@ const products = [
     composition: "Amoxycillin Clavulanate 228.5 mg (6.6 GRAM / 60 ML)",
     packaging: "60 ML Glass Bottle + W.F.I. + Measuring Cup",
     usage: "For bacterial infections like respiratory, ear, and urinary tract infections in children",
+    image: jixclavXl,
   },
   {
     id: 4,
@@ -48,6 +61,7 @@ const products = [
     composition: "Amoxycillin Clavulanate 457 mg (6.6 GRAM / 30 ML)",
     packaging: "30 ML Glass Bottle + W.F.I. + Measuring Cup",
     usage: "For moderate to severe bacterial infections in children",
+    image: jixclavForte,
   },
   {
     id: 5,
@@ -56,6 +70,7 @@ const products = [
     composition: "Amoxycillin Clavulanate 457 mg (13.2 GRAM / 60 ML)",
     packaging: "60 ML Glass Bottle + W.F.I. + Measuring Cup",
     usage: "For moderate to severe bacterial infections in children",
+    image: jixclavForteXl,
   },
   {
     id: 6,
@@ -64,6 +79,7 @@ const products = [
     composition: "Amoxycillin Clavulanate 457 mg Dispersible Tablet (Mango Flavour)",
     packaging: "10X1X10 (Mono cartoon pack of 1 strip)",
     usage: "For bacterial infections - easy to dissolve tablet for children",
+    image: jixclav457,
   },
   {
     id: 7,
@@ -72,6 +88,7 @@ const products = [
     composition: "Amoxycillin Clavulanate 625 mg Film Coated Tablet",
     packaging: "10X1X10 (Mono cartoon pack of 1 strip)",
     usage: "For bacterial infections in older children and adults",
+    image: jixclav625,
   },
   {
     id: 8,
@@ -168,6 +185,7 @@ const products = [
     composition: "Phenylephrine 5mg + Chlorpheniramine Maleate 2mg + Dextromethorphan 15mg per 5ml",
     packaging: "100ML PET Bottle + Measuring Cup",
     usage: "For cold, cough, and nasal congestion relief",
+    image: asthazix,
   },
   {
     id: 20,
@@ -176,6 +194,7 @@ const products = [
     composition: "Salbutamol 1 mg + Theophyline 50 mg",
     packaging: "100ML PET Bottle + Measuring Cup",
     usage: "For asthma and bronchospasm relief in children",
+    image: asthazix,
   },
   {
     id: 21,
@@ -200,6 +219,7 @@ const products = [
     composition: "Ambroxol 75mg + Levocetirizine 5mg + Montelukast 10mg",
     packaging: "ALU-ALU",
     usage: "For allergic respiratory conditions, cough, and congestion",
+    image: alairzix3d,
   },
   {
     id: 24,
@@ -265,6 +285,7 @@ const products = [
     composition: "Azithromycin 200mg/5ml",
     packaging: "30ML PET Bottle + Measuring Cup",
     usage: "For respiratory tract, skin, and ear infections",
+    image: aizixXl,
   },
   {
     id: 32,
@@ -273,6 +294,7 @@ const products = [
     composition: "Drotaverine 20mg/5ml",
     packaging: "60ML PET Bottle + Measuring Cup",
     usage: "For abdominal cramps and smooth muscle spasms",
+    image: droteam,
   },
   {
     id: 33,
@@ -281,6 +303,7 @@ const products = [
     composition: "Chlorpheniramine 2mg + Paracetamol 250mg + Phenylephrine 5mg + Sodium Citrate 60mg",
     packaging: "60ML PET Bottle + Measuring Cup",
     usage: "For cold, flu symptoms, fever, and nasal congestion",
+    image: coldBoy,
   },
   {
     id: 34,
@@ -404,23 +427,33 @@ const Products = () => {
                   product.highlight ? "border-primary/50 ring-2 ring-primary/20" : "border-border"
                 }`}
               >
-                <div className={`h-32 flex items-center justify-center relative ${
+                <div className={`h-48 flex items-center justify-center relative overflow-hidden ${
                   product.highlight 
                     ? "bg-gradient-to-br from-primary/10 to-accent/10" 
                     : "bg-gradient-to-br from-primary/5 to-blue-light"
                 }`}>
                   {product.highlight && (
-                    <span className="absolute top-3 right-3 px-2 py-1 rounded-md bg-accent text-accent-foreground text-xs font-semibold">
+                    <span className="absolute top-3 right-3 px-2 py-1 rounded-md bg-accent text-accent-foreground text-xs font-semibold z-10">
                       Bestseller
                     </span>
                   )}
-                  {product.category === "injection" && <Syringe className="w-12 h-12 text-primary/40 group-hover:text-primary/60 transition-colors" />}
-                  {product.category === "drysyrup" && <Beaker className="w-12 h-12 text-primary/40 group-hover:text-primary/60 transition-colors" />}
-                  {product.category === "suspension" && <Droplet className="w-12 h-12 text-primary/40 group-hover:text-primary/60 transition-colors" />}
-                  {product.category === "syrup" && <Droplet className="w-12 h-12 text-primary/40 group-hover:text-primary/60 transition-colors" />}
-                  {product.category === "tablets" && <Package className="w-12 h-12 text-primary/40 group-hover:text-primary/60 transition-colors" />}
-                  {product.category === "capsules" && <Pill className="w-12 h-12 text-primary/40 group-hover:text-primary/60 transition-colors" />}
-                  {product.category === "sachet" && <Package className="w-12 h-12 text-primary/40 group-hover:text-primary/60 transition-colors" />}
+                  {product.image ? (
+                    <img 
+                      src={product.image} 
+                      alt={product.name} 
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  ) : (
+                    <>
+                      {product.category === "injection" && <Syringe className="w-12 h-12 text-primary/40 group-hover:text-primary/60 transition-colors" />}
+                      {product.category === "drysyrup" && <Beaker className="w-12 h-12 text-primary/40 group-hover:text-primary/60 transition-colors" />}
+                      {product.category === "suspension" && <Droplet className="w-12 h-12 text-primary/40 group-hover:text-primary/60 transition-colors" />}
+                      {product.category === "syrup" && <Droplet className="w-12 h-12 text-primary/40 group-hover:text-primary/60 transition-colors" />}
+                      {product.category === "tablets" && <Package className="w-12 h-12 text-primary/40 group-hover:text-primary/60 transition-colors" />}
+                      {product.category === "capsules" && <Pill className="w-12 h-12 text-primary/40 group-hover:text-primary/60 transition-colors" />}
+                      {product.category === "sachet" && <Package className="w-12 h-12 text-primary/40 group-hover:text-primary/60 transition-colors" />}
+                    </>
+                  )}
                 </div>
                 <div className="p-5">
                   <h3 className="font-display text-base font-semibold text-foreground mb-2 line-clamp-2">
