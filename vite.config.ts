@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: "/",
+  base: "/jigson/",
   server: {
     host: "::",
     port: 8080,
@@ -14,6 +14,17 @@ export default defineConfig(({ mode }) => ({
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
+    },
+  },
+  build: {
+    chunkSizeWarningLimit: 1000,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ["react", "react-dom"],
+          radix: ["@radix-ui/react-accordion", "@radix-ui/react-alert-dialog", "@radix-ui/react-popover"],
+        },
+      },
     },
   },
 }));
