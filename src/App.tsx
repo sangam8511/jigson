@@ -15,7 +15,7 @@ const queryClient = new QueryClient();
 
 const App = () => {
   const basename = import.meta.env.MODE === "development" ? "/" : "/jigson/";
-  
+
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
