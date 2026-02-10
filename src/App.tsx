@@ -14,10 +14,12 @@ import NotFound from "./pages/NotFound";
 const queryClient = new QueryClient();
 
 const App = () => {
+  const basename = import.meta.env.MODE === "development" ? "/" : "/jigson/";
+  
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <BrowserRouter>
+        <BrowserRouter basename={basename}>
           <ScrollToTop />
           <Routes>
             <Route path="/" element={<Index />} />
