@@ -1,6 +1,15 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Search, ArrowRight, Pill, Droplet, Syringe, FlaskConical, Package, Beaker } from "lucide-react";
+import {
+  Search,
+  ArrowRight,
+  Pill,
+  Droplet,
+  Syringe,
+  FlaskConical,
+  Package,
+  Beaker,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Layout } from "@/components/layout/Layout";
@@ -63,8 +72,10 @@ const products = [
     category: "drysyrup",
     composition: "Amoxycillin Clavulanate 228.5 mg (3.3 GRAM / 30 ML)",
     packaging: "30 ML Glass Bottle + W.F.I. + Measuring Cup",
-    usage: "For bacterial infections like respiratory, ear, and urinary tract infections in children",
+    usage:
+      "For bacterial infections like respiratory, ear, and urinary tract infections in children",
     image: jixclav,
+    bestseller: true,
   },
   {
     id: 3,
@@ -72,7 +83,8 @@ const products = [
     category: "drysyrup",
     composition: "Amoxycillin Clavulanate 228.5 mg (6.6 GRAM / 60 ML)",
     packaging: "60 ML Glass Bottle + W.F.I. + Measuring Cup",
-    usage: "For bacterial infections like respiratory, ear, and urinary tract infections in children",
+    usage:
+      "For bacterial infections like respiratory, ear, and urinary tract infections in children",
     image: jixclavXl,
   },
   {
@@ -97,7 +109,8 @@ const products = [
     id: 6,
     name: "JIXSCLAV 457 MG KIDS DISPERSIBLE TABLET",
     category: "tablets",
-    composition: "Amoxycillin Clavulanate 457 mg Dispersible Tablet (Mango Flavour)",
+    composition:
+      "Amoxycillin Clavulanate 457 mg Dispersible Tablet (Mango Flavour)",
     packaging: "10X1X10 (Mono cartoon pack of 1 strip)",
     usage: "For bacterial infections - easy to dissolve tablet for children",
     image: jixclav457,
@@ -115,16 +128,19 @@ const products = [
     id: 8,
     name: "JIXSPOD - 50 MG DRY SYRUP",
     category: "drysyrup",
-    composition: "Cefpodoxime 50mg Dry Syrup (15 GM / 30 ML) - Tangy Orange Flavour",
+    composition:
+      "Cefpodoxime 50mg Dry Syrup (15 GM / 30 ML) - Tangy Orange Flavour",
     packaging: "30 ML Glass Bottle + W.F.I. + Measuring Cup",
-    usage: "For respiratory tract, skin, and soft tissue infections in children",
+    usage:
+      "For respiratory tract, skin, and soft tissue infections in children",
     image: jixpod50100,
   },
   {
     id: 9,
     name: "JIXSPOD - CV-50 MG DRY SYRUP",
     category: "drysyrup",
-    composition: "Cefpodoxime 50mg + Clavulanic Acid 31.25 mg (11 GM / 30 ML) - Mix Fruit Flavour",
+    composition:
+      "Cefpodoxime 50mg + Clavulanic Acid 31.25 mg (11 GM / 30 ML) - Mix Fruit Flavour",
     packaging: "30 ML Glass Bottle + W.F.I. + Measuring Cup",
     usage: "For resistant bacterial infections in children",
     image: jixpodCv50,
@@ -133,7 +149,8 @@ const products = [
     id: 10,
     name: "JIXSPOD - 100 MG DRY SYRUP",
     category: "drysyrup",
-    composition: "Cefpodoxime 100mg Dry Syrup (15 GM / 30 ML) - Tangy Orange Flavour",
+    composition:
+      "Cefpodoxime 100mg Dry Syrup (15 GM / 30 ML) - Tangy Orange Flavour",
     packaging: "30 ML Glass Bottle + W.F.I. + Measuring Cup",
     usage: "For respiratory tract, skin, and soft tissue infections",
     image: jixpod100,
@@ -142,7 +159,8 @@ const products = [
     id: 11,
     name: "JIXSPOD - CV-100 MG DRY SYRUP",
     category: "drysyrup",
-    composition: "Cefpodoxime 100mg + Clavulanic Acid 62.50 mg (13 GM / 30 ML) - Mix Fruit Flavour",
+    composition:
+      "Cefpodoxime 100mg + Clavulanic Acid 62.50 mg (13 GM / 30 ML) - Mix Fruit Flavour",
     packaging: "30 ML Glass Bottle + W.F.I. + Measuring Cup",
     usage: "For resistant bacterial infections requiring stronger coverage",
     image: jixpodCv100,
@@ -178,7 +196,8 @@ const products = [
     id: 15,
     name: "TAVPOL - MF SUSPENSION 60 ML",
     category: "suspension",
-    composition: "Paracetamol 250 mg + Mefenamic Acid 100 mg Suspension (Sweet Mango Flavour)",
+    composition:
+      "Paracetamol 250 mg + Mefenamic Acid 100 mg Suspension (Sweet Mango Flavour)",
     packaging: "60ML PET Bottle + Measuring Cup",
     usage: "For fever, pain, and inflammatory conditions in children",
     image: tavpolMf,
@@ -187,7 +206,8 @@ const products = [
     id: 16,
     name: "TAVPOL - MF SUSPENSION 100 ML",
     category: "suspension",
-    composition: "Paracetamol 250 mg + Mefenamic Acid 100 mg Suspension (Sweet Mango Flavour)",
+    composition:
+      "Paracetamol 250 mg + Mefenamic Acid 100 mg Suspension (Sweet Mango Flavour)",
     packaging: "100ML PET Bottle + Measuring Cup",
     usage: "For fever, pain, and inflammatory conditions in children",
     image: tavpolMf,
@@ -196,7 +216,8 @@ const products = [
     id: 17,
     name: "TAWIBRO SUSPENSION 60 ML",
     category: "suspension",
-    composition: "Paracetamol 100mg + Ibuprofen 162.5 mg Suspension (Mix Fruit Flavour)",
+    composition:
+      "Paracetamol 100mg + Ibuprofen 162.5 mg Suspension (Mix Fruit Flavour)",
     packaging: "60ML PET Bottle + Measuring Cup",
     usage: "For fast fever and pain relief in children",
     image: tawibro,
@@ -205,7 +226,8 @@ const products = [
     id: 18,
     name: "TAWIBRO SUSPENSION 100 ML",
     category: "suspension",
-    composition: "Paracetamol 100mg + Ibuprofen 162.5 mg Suspension (Mix Fruit Flavour)",
+    composition:
+      "Paracetamol 100mg + Ibuprofen 162.5 mg Suspension (Mix Fruit Flavour)",
     packaging: "100ML PET Bottle + Measuring Cup",
     usage: "For fast fever and pain relief in children",
     image: tawibro,
@@ -214,7 +236,8 @@ const products = [
     id: 19,
     name: "ASTHAZIX SYRUP-15X - 100 ML",
     category: "syrup",
-    composition: "Phenylephrine 5mg + Chlorpheniramine Maleate 2mg + Dextromethorphan 15mg per 5ml",
+    composition:
+      "Phenylephrine 5mg + Chlorpheniramine Maleate 2mg + Dextromethorphan 15mg per 5ml",
     packaging: "100ML PET Bottle + Measuring Cup",
     usage: "For cold, cough, and nasal congestion relief",
     image: asthazix,
@@ -306,6 +329,7 @@ const products = [
     packaging: "Injection + WFI",
     usage: "For serious multi-drug resistant bacterial infections",
     highlight: true,
+    bestseller: true,
     image: meropaim,
   },
   {
@@ -339,7 +363,8 @@ const products = [
     id: 33,
     name: "COLDBOY - SUSPENSION",
     category: "suspension",
-    composition: "Chlorpheniramine 2mg + Paracetamol 250mg + Phenylephrine 5mg + Sodium Citrate 60mg",
+    composition:
+      "Chlorpheniramine 2mg + Paracetamol 250mg + Phenylephrine 5mg + Sodium Citrate 60mg",
     packaging: "60ML PET Bottle + Measuring Cup",
     usage: "For cold, flu symptoms, fever, and nasal congestion",
     image: coldBoy,
@@ -348,10 +373,13 @@ const products = [
     id: 34,
     name: "SPOBIO CL",
     category: "suspension",
-    composition: "2 Billion Spores of Poly-antibiotic Resistance Bacillus Clausii (Original Strains)",
+    composition:
+      "2 Billion Spores of Poly-antibiotic Resistance Bacillus Clausii (Original Strains)",
     packaging: "5 ML Mini Bottle / 10 Mini Bottles per Box",
-    usage: "For gut health restoration and diarrhea management, globally available",
+    usage:
+      "For gut health restoration and diarrhea management, globally available",
     highlight: true,
+    bestseller: true,
     image: spobioCl,
   },
   {
@@ -360,25 +388,30 @@ const products = [
     category: "sachet",
     composition: "WHO Recommended ORS Formulation + Zinc 10 mg + Probiotics",
     packaging: "5 GM Sachet",
-    usage: "For diarrhea and electrolyte imbalance management - affordable and effective",
+    usage:
+      "For diarrhea and electrolyte imbalance management - affordable and effective",
     highlight: true,
+    bestseller: true,
     image: kidros1,
   },
   {
     id: 36,
     name: "KIDWITS ADVANCE SYRUP - 100 ML",
     category: "syrup",
-    composition: "Advance Iron + Multivitamin + Multi Mineral + Zinc + Vitamin C + Vitamin D + Amino Acid + Antioxidants",
+    composition:
+      "Advance Iron + Multivitamin + Multi Mineral + Zinc + Vitamin C + Vitamin D + Amino Acid + Antioxidants",
     packaging: "100 ML",
     usage: "For complete nutritional support and healthy growth in children",
     highlight: true,
+    bestseller: true,
     image: kidwits,
   },
   {
     id: 37,
     name: "KIDWITS ADVANCE SYRUP - 200 ML",
     category: "syrup",
-    composition: "Advance Iron + Multivitamin + Multi Mineral + Zinc + Vitamin C + Vitamin D + Amino Acid + Antioxidants",
+    composition:
+      "Advance Iron + Multivitamin + Multi Mineral + Zinc + Vitamin C + Vitamin D + Amino Acid + Antioxidants",
     packaging: "200 ML",
     usage: "For complete nutritional support and healthy growth in children",
     highlight: true,
@@ -388,7 +421,8 @@ const products = [
     id: 38,
     name: "KIDWITS ADVANCE PROTEIN POWDER",
     category: "sachet",
-    composition: "Advanced 37 Vital Nutritional Support to Children (Chocolate Flavour)",
+    composition:
+      "Advanced 37 Vital Nutritional Support to Children (Chocolate Flavour)",
     packaging: "200 GM",
     usage: "For comprehensive nutritional and protein support in children",
     highlight: true,
@@ -400,12 +434,21 @@ const Products = () => {
   const [activeCategory, setActiveCategory] = useState("all");
   const [searchQuery, setSearchQuery] = useState("");
 
-  const filteredProducts = products.filter((product) => {
-    const matchesCategory = activeCategory === "all" || product.category === activeCategory;
-    const matchesSearch = product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      product.composition.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
+  const filteredProducts = products
+    .filter((product) => {
+      const matchesCategory =
+        activeCategory === "all" || product.category === activeCategory;
+      const matchesSearch =
+        product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        product.composition.toLowerCase().includes(searchQuery.toLowerCase());
+      return matchesCategory && matchesSearch;
+    })
+    .sort((a, b) => {
+      // Sort bestsellers to the top
+      if (a.bestseller && !b.bestseller) return -1;
+      if (!a.bestseller && b.bestseller) return 1;
+      return 0;
+    });
 
   return (
     <Layout>
@@ -421,8 +464,9 @@ const Products = () => {
               Our Paediatric Range
             </h1>
             <p className="text-lg text-muted-foreground animate-fade-up delay-200">
-              Explore our comprehensive portfolio of 38+ high-quality paediatric 
-              pharmaceutical formulations designed with care for growing children.
+              Explore our comprehensive portfolio of 38+ high-quality paediatric
+              pharmaceutical formulations designed with care for growing
+              children.
             </p>
           </div>
         </div>
@@ -468,34 +512,52 @@ const Products = () => {
               <div
                 key={product.id}
                 className={`group bg-card rounded-2xl border overflow-hidden hover-lift ${
-                  product.highlight ? "border-primary/50 ring-2 ring-primary/20" : "border-border"
+                  product.highlight
+                    ? "border-primary/50 ring-2 ring-primary/20"
+                    : "border-border"
                 }`}
               >
-                <div className={`h-48 flex items-center justify-center relative overflow-hidden ${
-                  product.highlight 
-                    ? "bg-gradient-to-br from-primary/10 to-accent/10" 
-                    : "bg-gradient-to-br from-primary/5 to-blue-light"
-                }`}>
-                  {product.highlight && (
-                    <span className="absolute top-3 right-3 px-2 py-1 rounded-md bg-accent text-accent-foreground text-xs font-semibold z-10">
-                      Bestseller
+                <div
+                  className={`h-48 flex items-center justify-center relative overflow-hidden ${
+                    product.highlight
+                      ? "bg-gradient-to-br from-primary/10 to-accent/10"
+                      : "bg-gradient-to-br from-primary/5 to-blue-light"
+                  }`}
+                >
+                  {product.bestseller && (
+                    <span className="absolute top-3 right-3 px-3 py-1 rounded-lg bg-accent text-accent-foreground text-xs font-bold z-10 shadow-md">
+                      ⭐ Bestseller
                     </span>
                   )}
                   {product.image ? (
-                    <img 
-                      src={product.image} 
-                      alt={product.name} 
+                    <img
+                      src={product.image}
+                      alt={product.name}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   ) : (
                     <>
-                      {product.category === "injection" && <Syringe className="w-12 h-12 text-primary/40 group-hover:text-primary/60 transition-colors" />}
-                      {product.category === "drysyrup" && <Beaker className="w-12 h-12 text-primary/40 group-hover:text-primary/60 transition-colors" />}
-                      {product.category === "suspension" && <Droplet className="w-12 h-12 text-primary/40 group-hover:text-primary/60 transition-colors" />}
-                      {product.category === "syrup" && <Droplet className="w-12 h-12 text-primary/40 group-hover:text-primary/60 transition-colors" />}
-                      {product.category === "tablets" && <Package className="w-12 h-12 text-primary/40 group-hover:text-primary/60 transition-colors" />}
-                      {product.category === "capsules" && <Pill className="w-12 h-12 text-primary/40 group-hover:text-primary/60 transition-colors" />}
-                      {product.category === "sachet" && <Package className="w-12 h-12 text-primary/40 group-hover:text-primary/60 transition-colors" />}
+                      {product.category === "injection" && (
+                        <Syringe className="w-12 h-12 text-primary/40 group-hover:text-primary/60 transition-colors" />
+                      )}
+                      {product.category === "drysyrup" && (
+                        <Beaker className="w-12 h-12 text-primary/40 group-hover:text-primary/60 transition-colors" />
+                      )}
+                      {product.category === "suspension" && (
+                        <Droplet className="w-12 h-12 text-primary/40 group-hover:text-primary/60 transition-colors" />
+                      )}
+                      {product.category === "syrup" && (
+                        <Droplet className="w-12 h-12 text-primary/40 group-hover:text-primary/60 transition-colors" />
+                      )}
+                      {product.category === "tablets" && (
+                        <Package className="w-12 h-12 text-primary/40 group-hover:text-primary/60 transition-colors" />
+                      )}
+                      {product.category === "capsules" && (
+                        <Pill className="w-12 h-12 text-primary/40 group-hover:text-primary/60 transition-colors" />
+                      )}
+                      {product.category === "sachet" && (
+                        <Package className="w-12 h-12 text-primary/40 group-hover:text-primary/60 transition-colors" />
+                      )}
                     </>
                   )}
                 </div>
@@ -507,11 +569,16 @@ const Products = () => {
                     {product.composition}
                   </p>
                   <div className="bg-primary/5 rounded-lg p-3 mb-3">
-                    <span className="text-xs font-medium text-primary">Used For:</span>
-                    <p className="text-xs text-foreground mt-1">{product.usage}</p>
+                    <span className="text-xs font-medium text-primary">
+                      Used For:
+                    </span>
+                    <p className="text-xs text-foreground mt-1">
+                      {product.usage}
+                    </p>
                   </div>
                   <div className="text-xs text-muted-foreground">
-                    <span className="font-medium">Pack:</span> {product.packaging}
+                    <span className="font-medium">Pack:</span>{" "}
+                    {product.packaging}
                   </div>
                 </div>
               </div>
@@ -540,8 +607,9 @@ const Products = () => {
             Looking for Partnership?
           </h2>
           <p className="text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-            Partner with Jigson Pharma and access our reliable paediatric product range 
-            backed by science, strong compliance, and consistent quality.
+            Partner with Jigson Pharma and access our reliable paediatric
+            product range backed by science, strong compliance, and consistent
+            quality.
           </p>
           <Button variant="accent" size="xl" asChild>
             <Link to="/work-with-us">
