@@ -14,7 +14,7 @@ import NotFound from "./pages/NotFound";
 const queryClient = new QueryClient();
 
 const App = () => {
-  const basename = import.meta.env.MODE === "development" ? "/" : "/jigson/";
+  const basename = "/";
 
   return (
     <QueryClientProvider client={queryClient}>
